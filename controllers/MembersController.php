@@ -3,18 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Projects;
-use app\models\ProjectsSearch;
+use app\models\Members;
+use app\models\MembersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
-use yii\filters\AccessControl;
 
 /**
- * ProjectsController implements the CRUD actions for Projects model.
+ * MembersController implements the CRUD actions for Members model.
  */
-class ProjectsController extends Controller
+class MembersController extends Controller
 {
     /**
      * @inheritdoc
@@ -22,18 +20,6 @@ class ProjectsController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['create', 'update', 'delete','view'],
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'roles' => ['@']
-                        
-                    ]
-                    
-                ]
-            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -44,32 +30,29 @@ class ProjectsController extends Controller
     }
 
     /**
-     * Lists all Projects models.
+     * Lists all Members models.
      * @return mixed
      */
     public function actionIndex()
     {
-
-        $searchModel = new ProjectsSearch();
+        $searchModel = new MembersSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-
+        
         if (Yii::$app->user->isGuest) {
 
-        echo "This page does not exist. ";
-        } else {
-            return $this->render(
+            echo "This page does not exist. ";
             
-            'index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+        } else {
+                return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+          ]);
         }
-
     }
 
     /**
-     * Displays a single Projects model.
+     * Displays a single Members model.
      * @param integer $id
      * @return mixed
      */
@@ -81,25 +64,15 @@ class ProjectsController extends Controller
     }
 
     /**
-     * Creates a new Projects model.
+     * Creates a new Members model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Projects();
+        $model = new Members();
 
-        if ($model->load(Yii::$app->request->post())) {
-            
-            //get the instance of the uploaded file
-            $imageName = $model->name;
-            $model->file = UploadedFile::getInstance($model,'file');
-            $model->file->saveAs('uploads/'.$imageName.'.'.$model->file->extension );
-
-            //save the path in the db column
-            $model->image = 'uploads/'.$imageName.'.'.$model->file->extension;
-
-            $model->save();
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -109,7 +82,7 @@ class ProjectsController extends Controller
     }
 
     /**
-     * Updates an existing Projects model.
+     * Updates an existing Members model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -128,7 +101,7 @@ class ProjectsController extends Controller
     }
 
     /**
-     * Deletes an existing Projects model.
+     * Deletes an existing Members model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -141,15 +114,15 @@ class ProjectsController extends Controller
     }
 
     /**
-     * Finds the Projects model based on its primary key value.
+     * Finds the Members model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Projects the loaded model
+     * @return Members the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Projects::findOne($id)) !== null) {
+        if (($model = Members::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -10,13 +10,13 @@ use yii\widgets\ActiveForm;
 
 <div class="projects-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' =>['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'date')->textInput() ?>
 
-    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'file')->fileInput(); ?>
 
     <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 

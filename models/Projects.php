@@ -16,6 +16,8 @@ use yii\db\ActiveRecord;
  */
 class Projects extends \yii\db\ActiveRecord
 {
+
+    public $file;
     /**
      * @inheritdoc
      */
@@ -32,7 +34,8 @@ class Projects extends \yii\db\ActiveRecord
         return [
             [['name', 'date', 'image', 'body', 'status'], 'required'],
             [['date'], 'safe'],
-            [['body', 'status'], 'string'],
+            [['file'], 'file'],
+            [['body', 'image', 'status'], 'string'],
             [['name', 'image'], 'string', 'max' => 255],
         ];
     }
@@ -46,9 +49,9 @@ class Projects extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'date' => 'Date',
-            'image' => 'Image',
             'body' => 'Body',
             'status' => 'Status',
+            'file' => 'Image'
         ];
     }
 }
