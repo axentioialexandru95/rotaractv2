@@ -19,8 +19,12 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'css/layout.css',
+        '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+        '//fonts.googleapis.com/css?family=Roboto+Slab',
     ];
     public $js = [
+        'javascript/site.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

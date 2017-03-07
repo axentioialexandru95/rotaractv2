@@ -49,7 +49,7 @@ class ProjectsController extends Controller
      */
     public function actionIndex()
     {
-
+        $this->layout = 'main';
         $searchModel = new ProjectsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
