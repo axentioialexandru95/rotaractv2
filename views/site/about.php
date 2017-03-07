@@ -16,13 +16,14 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
 
-<div class="about-text">
+<div class="container">
+    <div class="about-text">
 
-    <h1>Cine suntem?</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt minima animi aliquam harum voluptatem soluta rem corrupti tempora quis, optio tenetur necessitatibus minus culpa amet temporibus fugit ducimus, at voluptatum!</p>
-    <hr>
+        <h1>Cine suntem?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt minima animi aliquam harum voluptatem soluta rem corrupti tempora quis, optio tenetur necessitatibus minus culpa amet temporibus fugit ducimus, at voluptatum!</p>
+        <hr>
+    </div>
 </div>
-
 <div class="about-members text-center">
     <button class="btn btn-primary">Membri</button>
 </div>

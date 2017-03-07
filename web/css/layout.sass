@@ -209,13 +209,14 @@ $primary-color: rgb(217, 27, 92)
         background:
             image: url(../images/header.PNG)
             size: cover
-            position: top
+            position: bottom
+            attachment: fixed
     .header-text
         margin-top: 150px
 //About Text
 .about-text
     height: 330px
-    margin: 0px 60px
+    margin: 0px 100px
     h1 
         font-family: $primary-font
         margin-top: 170px
@@ -279,3 +280,79 @@ $primary-color: rgb(217, 27, 92)
 .map
     margin-top: 50px
     width: 100vw
+
+
+// Blog Header
+.blog-header
+    height: 400px
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background:
+        image: url(../images/header.PNG)
+        attachment: fixed
+        size: cover
+        position: center
+    
+    .blog-text
+        height: 400px
+        h1 
+            padding-top: 170px
+            color: white
+
+
+//Projects Header
+.projects
+    position: relative
+    margin-top: 400px
+    height: 200px
+
+.finished-projects
+    margin-top: 100px
+    .projects-text
+        hr 
+            margin-bottom: 70px
+.projects-text
+    h1
+        padding-top: 70px
+    hr 
+        border-top: 1px solid $primary-color
+        margin: 0px 33%
+
+.projects-layouts
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    .image
+        position: relative
+        transition: 0.3s all ease-in-out
+        img
+            margin: 10px
+            height: 300px
+            width: 500px
+            box-shadow: 0px 3px 10px black
+                
+
+        h3
+            position: absolute
+            left: 0
+            top: 170px
+            right: 0
+            bottom: 0
+            color: white
+            margin: auto
+            background-color: rgba($primary-color, 0.5)
+            padding-top: 10px
+            margin-left: 10px
+            margin-right: 10px
+            margin-bottom: 10px
+            font-size: 3rem
+            font-family: $primary-font
+            transition: 0.3s all ease-in-out
+
+            &:hover
+                top: 10px
+                
+            
