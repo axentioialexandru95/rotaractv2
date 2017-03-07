@@ -8,9 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\RegisterForm;
 use app\models\Users;
-use app\models\Useless;
 
 class SiteController extends Controller
 {
@@ -126,30 +124,14 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionRegister()
+    /*public function actionRegister()
     {
-        /*$db = new yii\db\Connection([
-        'dsn' => 'mysql:host=localhost;dbname=yiisite',
-        'username' => 'root',
-        'password' => 'nRnz32@;',
-        'charset' => 'utf8',
-        ]);*/
-        
-        $model = new RegisterForm();
-        if($model->load(Yii::$app->request->post()) && $model->validate())
+        $model = new Users();
+        if($model-load(Yii::$app->request->post()) && $model->validate())
         {
-            Yii::$app->session->setFlash('success', 'Te-ai inregistrat cu succes');
-            Yii::$app->db->createCommand()->insert('users', [
-            'name' => $model->name,
-            'surname' => $model->surname,
-            'phoneNumber' => $model->phoneNumber,
-            'emailAddress' => $model->emailAddress,
-            'message' => $model->message,
-            ])->execute();
-            return $this->refresh();
+            echo "Successfuly registred";
         }
-
-        return $this->render('register', ['model' => $model]);
-    }
+        return $this->render('register');
+    }*/
 }
-
+?>
