@@ -24,7 +24,10 @@ class AppAsset extends AssetBundle
         '//fonts.googleapis.com/css?family=Roboto+Slab',
     ];
     public $js = [
-        'javascript/site.js'
+        '//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+        'javascript/site.js',
+        'javascript/backtotop.js',
+        
     ];
     public $depends = [
         'yii\web\YiiAsset',

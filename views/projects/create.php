@@ -8,14 +8,17 @@ use yii\helpers\Html;
 
 $this->title = 'Create Projects';
 $this->params['breadcrumbs'][] = ['label' => 'Projects', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
-<div class="projects-create">
+<div class="create-header text-center">
+    <h1> Create Project</h1>
+</div>
+<div class="background-projects">
+    <div class="projects-create container">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+        <?= $this->render('_form', [
+            'model' => $model,
+        ]) ?>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
-
+    </div>
 </div>

@@ -2,6 +2,9 @@
 $primary-font: 'Roboto Slab'
 $primary-color: rgb(217, 27, 92)
 
+html,body
+    overflow-x: hidden
+
 
 //Reset 
 .container-fluid
@@ -92,6 +95,7 @@ $primary-color: rgb(217, 27, 92)
 // Index Learning
 .index-learning
     h1
+        color: black
         font-family: $primary-font
         margin-top: 70px
     i 
@@ -155,6 +159,7 @@ $primary-color: rgb(217, 27, 92)
     display: flex
     justify-content: space-around
     h1 
+        color: black !important
         font-family: $primary-font
         margin-top: 20px
     .resized
@@ -168,7 +173,7 @@ $primary-color: rgb(217, 27, 92)
 
 // Main footer
 .footer
-    height: 60px
+    height: 30px
     background-color: black
     border-top: 0px
     color: white
@@ -218,6 +223,7 @@ $primary-color: rgb(217, 27, 92)
     height: 330px
     margin: 0px 100px
     h1 
+        color: black
         font-family: $primary-font
         margin-top: 170px
 
@@ -354,5 +360,263 @@ $primary-color: rgb(217, 27, 92)
 
             &:hover
                 top: 10px
-                
+
+
+
+// Members Page
+.members-header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    height: 300px
+    background:
+        attachment: fixed
+        size: cover
+        position: center
+        image: url(../images/header.PNG)
+
+    h1 
+        margin-top: 130px
+        color: white
+
+.members
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-top: 300px
+    img 
+        transition: 0.3s all ease-in-out
+        margin: 30px
+        height: 300px
+        width: 400px                
+        box-shadow: 0px 5px 10px black
+        cursor: pointer
+        &:hover
+            transform: translateY(-2px)
+    
+    .image
+        position: relative
+        h3
+            position: absolute
+            top: 200px
+            left: 30px
+            color: white
+            background-color: rgba(black, 0.7)
+            text-transform: uppercase
+            padding: 10px 20px
+            font-size: 2.5rem
+            cursor: pointer
+            &:hover
+                background-color: black
+        h4
+            position: absolute
+            top: 250px
+            left: 60px
+            color: white
+            background-color: $primary-color
+            text-transform: uppercase
+            padding: 10px 20px
+            font-size: 1.7rem
+            cursor: pointer
+
+
+// Wanna help page 
+.help-header
+    position: absolute
+    height: 300px
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: 
+        size: cover
+        position: center
+        attachment: fixed
+        image: url(../images/header.PNG)
+    
+    h1 
+        color: white
+        margin-top: 150px
+
+.help-methods
+    margin-top: 400px
+    hr 
+        margin: 20px 30%
+        border-top: 2px solid $primary-color
+    h3
+        font-size: 2.5rem  
+    
+    p
+        font-size: 1.7rem
+    .btn-primary
+        transition: 0.3s all ease-in-out
+        border-radius: 0
+        border: none
+        background-color: rgba($primary-color, 0.8)
+        font-size: 2rem
+        padding: 10px 20px
+        margin-top: 10px
+        &:hover
+            transform: translateY(-2px)
+            box-shadow: 0px 5px 10px rgba(black, 0.3)
+    .col-md-4
+        border-right: 1px solid $primary-color
+        transition: 0.3s all ease-in-out
+        &:hover
+            background-color: rgba($primary-color, 0.1)
+    .container
+        .last
+            border-right: none
+
+    .fa-percent
+        margin-top: 70px
+
+
+// Login Panel
+.bg
+    height: 100vh
+    .background-login
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background:
+            image: url(../images/login.jpg)
+            size: cover
+        .site-login
+            margin-top: 35vh
+            background-color: rgba(white, 0.5)
+            border: none
+            border-radius: 0
+            h1 
+                font-size: 4rem
+                font-family: $primary-font
+                color: white
             
+            .btn-primary
+                background-color: rgba($primary-color,0.8)
+                border: 0
+                border-radius: 0
+                font-size: 2.5rem
+                padding: 10px 100px
+                margin-left: 180px
+            
+
+// Projects admin panel
+.bg-projects
+    position: relative
+    height: 100vh
+    .background-projects
+        position: absolute
+        height: 200px
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0 
+        background: 
+            size: cover
+            image: url(../images/login.jpg)
+            attachment: fixed
+            position: bottom
+        h1 
+            margin: auto
+            margin-left: 47vw
+            margin-top: 100px
+            color: white
+        .projects-index
+            margin-top: 130px
+            margin-left: 10%
+            margin-right: 10%
+            .btn-success
+                transition: 0.3s all ease-in-out
+                font-size: 2.3rem
+                padding: 10px 20px
+                background-color: rgba($primary-color, 0.8)
+                border: none
+                border-radius: 0
+                margin-bottom: 30px
+                &:hover
+                    transform: translateY(-2px)
+
+//Project Create
+.create-header
+    margin-top: -20px
+    height: 200px
+    background:
+        image: url(../images/login.jpg)
+        size: cover
+        attachment: fixed
+        position: bottom
+
+    h1
+        color: white
+        padding-top: 100px
+
+//Project View
+
+
+// Projects Form    
+.projects-form
+    margin-top: 100px
+    .btn-success
+        background-color: rgba($primary-color, 0.8)
+        border: none
+        border-radius: 0
+        padding: 10px 30px
+        font-size: 2rem
+
+//Back to top
+.go-top 
+	position: fixed
+	bottom: 2em
+	right: 2em
+	text-decoration: none
+	color: white
+	background-color: rgba($primary-color, 0.5)
+	font-size: 2rem
+	padding: 10px 15px
+	display: none
+a
+    color: white
+    
+    &:hover
+        color: white
+
+
+.go-top:hover    
+	background-color: rgba($primary-color, 0.8)
+
+
+
+// Projects view, blog-like post
+.project-view-header
+    height: 300px
+    margin-top: -20px
+    background:
+        size: cover
+        attachment: fixed
+        position: center
+        image: url(../images/header.PNG)
+    
+    h1
+        padding-top: 150px
+        color: white
+
+.buttons
+    margin: 50px
+    
+    .btn-primary
+        margin: 0 30px
+        border: 0
+        border-radius: 0
+        font-size: 3rem
+    .btn-danger
+        margin: 0 30px
+        border: 0
+        border-radius: 0
+        font-size: 3rem
+
+.project-post

@@ -3,21 +3,21 @@
 use yii\helpers\Html;
 
 
-$this->title = 'Members';
+$this->title = 'Vrei sa ajuti?';
 
 
 ?>
-<div>
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="members-header text-center">
+    <h1>Members</h1>
+</div>
 
-    
-<?php 
-
-foreach($members as $member){
-    echo $member->name;
-    echo $member->surname;
-    echo $member->position;
-    echo $member->image;
-    echo $member->CV."<br><br>";
-}
+<div class="members">
+    <?php foreach ($members as $member): ?>
+    <div class="image">
+    <img src="<?= $member->image ?>"  alt="<?= $member->name ?>">
+    <h3><?= $member->name ?> <?= $member->surname ?></h3>
+    <h4><?= $member->position ?></h4>
+    </div>
+    <?php endforeach; ?>
+</div>

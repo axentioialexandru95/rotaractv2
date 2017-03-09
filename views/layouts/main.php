@@ -43,7 +43,7 @@ AppAsset::register($this);
             ['label' => 'Proiecte', 'url' => ['/blog/index']],
             ['label' => 'Membri', 'url' => ['/people/index']],
             ['label' => 'Inscriere', 'url' => ['/people/index']],
-            ['label' => 'Vrei sa ajuti?', 'url' => ['/people/index']],
+            ['label' => 'Vrei sa ajuti?', 'url' => ['/site/help']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
@@ -89,6 +89,7 @@ AppAsset::register($this);
             <a href="#"><i class="fa fa-facebook"></i></a>
         </div>
     </div>
+<a href="#" class="go-top"> <i class="fa fa-arrow-up"></i></a>
 <footer class="footer">
     
     <div class="container">

@@ -10,11 +10,18 @@ $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Projects', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="projects-view">
 
+<div class="project-view-header text-center">
     <h1><?= Html::encode($this->title) ?></h1>
+</div>
 
-    <p>
+<div class="projects-view container">
+   
+    <?php if (Yii::$app->user->isGuest) {
+            echo 'Its a guest';
+    }?>
+
+    <p class="buttons text-center">
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -25,16 +32,24 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'name',
-            'date',
-            'image',
-            'body:ntext',
-            'status',
-        ],
-    ]) ?>
+    <div class="project-post">
+
+
+
+
+        <?= DetailView::widget([
+            'model' => $model,
+            'attributes' => [
+                'name',
+                'date',
+                'image',
+                'body:ntext',
+                'status',
+            ],
+        ]) ?>
+
+
+
+    </div>
 
 </div>

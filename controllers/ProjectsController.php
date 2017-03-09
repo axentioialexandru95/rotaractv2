@@ -75,6 +75,8 @@ class ProjectsController extends Controller
      */
     public function actionView($id)
     {
+        $projects = projects::find()->all();
+        
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);

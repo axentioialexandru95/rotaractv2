@@ -1,3 +1,6 @@
+html, body {
+  overflow-x: hidden; }
+
 .container-fluid {
   margin: 0;
   padding: 0; }
@@ -76,6 +79,7 @@
         color: #d91b5c; }
 
 .index-learning h1 {
+  color: black;
   font-family: "Roboto Slab";
   margin-top: 70px; }
 
@@ -136,6 +140,7 @@
   -ms-flex-pack: distribute;
   justify-content: space-around; }
   .partners h1 {
+    color: black !important;
     font-family: "Roboto Slab";
     margin-top: 20px; }
   .partners .resized {
@@ -150,7 +155,7 @@
       filter: grayscale(0%); }
 
 .footer {
-  height: 60px;
+  height: 30px;
   background-color: black;
   border-top: 0px;
   color: white; }
@@ -194,6 +199,7 @@
   height: 330px;
   margin: 0px 100px; }
   .about-text h1 {
+    color: black;
     font-family: "Roboto Slab";
     margin-top: 170px; }
 
@@ -319,3 +325,238 @@
       transition: 0.3s all ease-in-out; }
       .projects-layouts .image h3:hover {
         top: 10px; }
+
+.members-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/header.PNG); }
+  .members-header h1 {
+    margin-top: 130px;
+    color: white; }
+
+.members {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 300px; }
+  .members img {
+    transition: 0.3s all ease-in-out;
+    margin: 30px;
+    height: 300px;
+    width: 400px;
+    box-shadow: 0px 5px 10px black;
+    cursor: pointer; }
+    .members img:hover {
+      -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+      transform: translateY(-2px); }
+  .members .image {
+    position: relative; }
+    .members .image h3 {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-transform: uppercase;
+      padding: 10px 20px;
+      font-size: 2.5rem;
+      cursor: pointer; }
+      .members .image h3:hover {
+        background-color: black; }
+    .members .image h4 {
+      position: absolute;
+      top: 250px;
+      left: 60px;
+      color: white;
+      background-color: #d91b5c;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      font-size: 1.7rem;
+      cursor: pointer; }
+
+.help-header {
+  position: absolute;
+  height: 300px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(../images/header.PNG); }
+  .help-header h1 {
+    color: white;
+    margin-top: 150px; }
+
+.help-methods {
+  margin-top: 400px; }
+  .help-methods hr {
+    margin: 20px 30%;
+    border-top: 2px solid #d91b5c; }
+  .help-methods h3 {
+    font-size: 2.5rem; }
+  .help-methods p {
+    font-size: 1.7rem; }
+  .help-methods .btn-primary {
+    transition: 0.3s all ease-in-out;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(217, 27, 92, 0.8);
+    font-size: 2rem;
+    padding: 10px 20px;
+    margin-top: 10px; }
+    .help-methods .btn-primary:hover {
+      -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+      transform: translateY(-2px);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
+  .help-methods .col-md-4 {
+    border-right: 1px solid #d91b5c;
+    transition: 0.3s all ease-in-out; }
+    .help-methods .col-md-4:hover {
+      background-color: rgba(217, 27, 92, 0.1); }
+  .help-methods .container .last {
+    border-right: none; }
+  .help-methods .fa-percent {
+    margin-top: 70px; }
+
+.bg {
+  height: 100vh; }
+  .bg .background-login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/login.jpg);
+    background-size: cover; }
+    .bg .background-login .site-login {
+      margin-top: 35vh;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 0; }
+      .bg .background-login .site-login h1 {
+        font-size: 4rem;
+        font-family: "Roboto Slab";
+        color: white; }
+      .bg .background-login .site-login .btn-primary {
+        background-color: rgba(217, 27, 92, 0.8);
+        border: 0;
+        border-radius: 0;
+        font-size: 2.5rem;
+        padding: 10px 100px;
+        margin-left: 180px; }
+
+.bg-projects {
+  position: relative;
+  height: 100vh; }
+  .bg-projects .background-projects {
+    position: absolute;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-image: url(../images/login.jpg);
+    background-attachment: fixed;
+    background-position: bottom; }
+    .bg-projects .background-projects h1 {
+      margin: auto;
+      margin-left: 47vw;
+      margin-top: 100px;
+      color: white; }
+    .bg-projects .background-projects .projects-index {
+      margin-top: 130px;
+      margin-left: 10%;
+      margin-right: 10%; }
+      .bg-projects .background-projects .projects-index .btn-success {
+        transition: 0.3s all ease-in-out;
+        font-size: 2.3rem;
+        padding: 10px 20px;
+        background-color: rgba(217, 27, 92, 0.8);
+        border: none;
+        border-radius: 0;
+        margin-bottom: 30px; }
+        .bg-projects .background-projects .projects-index .btn-success:hover {
+          -webkit-transform: translateY(-2px);
+          -ms-transform: translateY(-2px);
+          transform: translateY(-2px); }
+
+.create-header {
+  margin-top: -20px;
+  height: 200px;
+  background-image: url(../images/login.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom; }
+  .create-header h1 {
+    color: white;
+    padding-top: 100px; }
+
+.projects-form {
+  margin-top: 100px; }
+  .projects-form .btn-success {
+    background-color: rgba(217, 27, 92, 0.8);
+    border: none;
+    border-radius: 0;
+    padding: 10px 30px;
+    font-size: 2rem; }
+
+.go-top {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(217, 27, 92, 0.5);
+  font-size: 2rem;
+  padding: 10px 15px;
+  display: none; }
+
+a {
+  color: white; }
+  a:hover {
+    color: white; }
+
+.go-top:hover {
+  background-color: rgba(217, 27, 92, 0.8); }
+
+.project-view-header {
+  height: 300px;
+  margin-top: -20px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url(../images/header.PNG); }
+  .project-view-header h1 {
+    padding-top: 150px;
+    color: white; }
+
+.buttons {
+  margin: 50px; }
+  .buttons .btn-primary {
+    margin: 0 30px;
+    border: 0;
+    border-radius: 0;
+    font-size: 3rem; }
+  .buttons .btn-danger {
+    margin: 0 30px;
+    border: 0;
+    border-radius: 0;
+    font-size: 3rem; }

@@ -8,6 +8,7 @@ use app\models\MembersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * MembersController implements the CRUD actions for Members model.
@@ -70,9 +71,22 @@ class MembersController extends Controller
      */
     public function actionCreate()
     {
+        
         $model = new Members();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+
+            $imageName = $model->name;
+            // Get the instance of the uploaded file
+            $model->file = UploadedFile::getInstance($model,'file');
+            $model->file->saveAs('uploads/'.$imageName.'.'.$model->file->extension);
+
+            //Save the path in thedb column
+            $model->image = 'uploads/'.$imageName.'.'.$model->file->extension;
+        
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

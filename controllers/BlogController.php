@@ -23,5 +23,13 @@ class BlogController extends Controller
         return $this->render('index',['projects'=>$projects]);
     }
 
+    public function actionView($id)
+    {
+        $projects = projects::find()->all();
+        
+        return $this->render('posts', [
+            'model' => $this->findModel($id),
+        ]);
+    }
 
 }

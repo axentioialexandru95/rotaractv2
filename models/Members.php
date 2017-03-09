@@ -16,6 +16,7 @@ use Yii;
  */
 class Members extends \yii\db\ActiveRecord
 {
+    public $file;
     /**
      * @inheritdoc
      */
@@ -31,6 +32,7 @@ class Members extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'surname', 'position', 'image', 'CV'], 'required'],
+            [['file'], 'file'],
             [['name', 'surname', 'position', 'image', 'CV'], 'string', 'max' => 255],
         ];
     }
@@ -47,6 +49,7 @@ class Members extends \yii\db\ActiveRecord
             'position' => 'Position',
             'image' => 'Image',
             'CV' => 'Cv',
+            'file' => 'Image',
         ];
     }
 
