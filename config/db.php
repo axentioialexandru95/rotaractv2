@@ -7,3 +7,5 @@ return [
     'password' => 'lifewarrior95',
     'charset' => 'utf8',
 ];
+
+$sql  = 'SELECT * FROM `projects` WHERE STATUS = \'active\'';

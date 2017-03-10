@@ -1,7 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use yii\helpers\Html;
+use yii\widgets\ListView;
 $this->title = 'Rotaract';
 ?>
 <div class="index-header">
@@ -41,17 +42,23 @@ $this->title = 'Rotaract';
 </div>
 
 <div class="index-projects text-center">
-    <div class="container">
+    <div class="container-fluid">
         <h1>Projects</h1>
-        <div class="col-md-4">
-            <img src="images/projects.jpeg" alt="">
-        </div>
-        <div class="col-md-4">
-            <img src="images/projects.jpeg" alt="">
-        </div>
-        <div class="col-md-4">
-            <img src="images/projects.jpeg" alt="">
-        </div>
+        <div class="container-fluid projects-layouts ">
+
+    <?php echo ListView::widget([
+        'dataProvider' => $limitProvider,
+        'summary' => false,
+        'itemView' => '_limit'
+
+    ]); ?>
+
+</div>
+
+
+
+
+
     </div>
 </div>
 

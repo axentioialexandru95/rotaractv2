@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\data\ArrayDataProvider;
 
 class SiteController extends Controller
 {
@@ -61,7 +62,22 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        //$rows = Yii::$app->db->createCommand('SELECT * FROM projects LIMIT 3')->queryAll();
+
+        //$projects = projects::find()->all();
+        //return $this->render('index');
+        
+
+        $limit = Yii::$app->db->createCommand('SELECT * FROM `projects` ORDER BY `projects`.`id` DESC LIMIT 3');
+
+        $limitProvider = new ArrayDataProvider([
+            'allModels' => $limit->queryAll(),
+        ]);
+
+        return $this->render('index',[
+            'limitProvider' => $limitProvider,
+        ]);
+
     }
 
     /**

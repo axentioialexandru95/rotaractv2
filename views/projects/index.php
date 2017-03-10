@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
             <p>
-                <?= Html::a('Create Projects', ['create'], ['class' => 'btn btn-success']) ?>
+                <?= Html::a('Add Project', ['create'], ['class' => 'btn btn-success']) ?>
             </p>
         <?php Pjax::begin(); ?>    <?= GridView::widget([
                 'dataProvider' => $dataProvider,
@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'date',
                     'image',
                     'body:ntext',
-                    // 'status',
+                    'status',
 
                     ['class' => 'yii\grid\ActionColumn'],
                 ],

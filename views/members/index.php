@@ -10,13 +10,17 @@ use yii\widgets\Pjax;
 $this->title = 'Members';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="members-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="create-header text-center">
+        <h1><?= Html::encode($this->title) ?></h1>
+</div>
+<div class="members-index text-center">
+
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Members', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Add Member', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 <?php Pjax::begin(); ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,
