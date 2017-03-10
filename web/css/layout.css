@@ -1,0 +1,562 @@
+html, body {
+  overflow-x: hidden; }
+
+.container-fluid {
+  margin: 0;
+  padding: 0; }
+
+.navbar-brand img {
+  height: 50px;
+  width: 150px; }
+
+.navbar {
+  border-bottom: none;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7); }
+  .navbar ul {
+    margin-top: 17px; }
+    .navbar ul li {
+      font-family: "Roboto Slab";
+      font-size: 1.78rem;
+      transition: 0.5s all ease-in-out; }
+      .navbar ul li:hover {
+        border-bottom: 1px solid white; }
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white; }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid #d91b5c; }
+
+.big {
+  transition: 0.3s all ease-in-out;
+  background-color: #d91b5c; }
+
+.index-header {
+  height: 350px; }
+  .index-header .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 500px;
+    width: 100%;
+    background-image: url(../images/header.PNG);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed; }
+  .index-header .header-content {
+    margin: 150px 200px 0px 200px;
+    color: white; }
+    .index-header .header-content h1 {
+      font-size: 4rem;
+      font-family: "Roboto Slab"; }
+    .index-header .header-content h3 {
+      font-family: "Roboto Slab";
+      font-size: 1.7rem; }
+    .index-header .header-content .btn-primary {
+      transition: 0.3s all ease-in-out;
+      background-color: rgba(217, 27, 92, 0.7);
+      border: none;
+      border-radius: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 2rem;
+      padding: 10px 20px; }
+      .index-header .header-content .btn-primary:hover {
+        background-color: #d91b5c; }
+    .index-header .header-content a {
+      color: white; }
+    .index-header .header-content .fa-facebook {
+      transition: 0.3s all ease-in-out;
+      margin-top: 40px;
+      font-size: 5rem; }
+      .index-header .header-content .fa-facebook:hover {
+        color: #d91b5c; }
+
+.index-learning h1 {
+  color: black;
+  font-family: "Roboto Slab";
+  margin-top: 70px; }
+
+.index-learning i {
+  transition: 0.3s all ease-in-out;
+  margin-top: 70px;
+  font-size: 4.3rem;
+  color: #d91b5c;
+  border: 2px dashed #d91b5c;
+  padding: 15px; }
+  .index-learning i:hover {
+    background-color: #d91b5c;
+    color: white; }
+
+.index-learning hr {
+  margin-left: 30px;
+  margin-right: 30px;
+  border-top: 1px solid #d91b5c; }
+
+.index-projects {
+  margin-top: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 500px; }
+  .index-projects h1 {
+    margin-top: 50px;
+    color: white;
+    font-family: "Roboto Slab"; }
+  .index-projects img {
+    height: 260px;
+    width: 350px;
+    box-shadow: 0px 5px 5px black;
+    margin-top: 40px; }
+
+.index-signup {
+  height: 300px;
+  background-image: url(../images/header.PNG);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed; }
+  .index-signup .btn-primary {
+    transition: 0.3s all ease-in-out;
+    margin-top: 130px;
+    background-color: transparent;
+    font-size: 2.3rem;
+    font-family: "Roboto Slab";
+    letter-spacing: 1px;
+    border-radius: 0;
+    border: 2px solid #d91b5c; }
+    .index-signup .btn-primary:hover {
+      background-color: #d91b5c; }
+
+.partners {
+  height: 200px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .partners h1 {
+    color: black !important;
+    font-family: "Roboto Slab";
+    margin-top: 20px; }
+  .partners .resized {
+    transition: 0.3s all ease-in-out;
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+    .partners .resized:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%); }
+
+.footer {
+  height: 30px;
+  background-color: black;
+  border-top: 0px;
+  color: white; }
+
+.footer-details {
+  padding-top: 50px;
+  color: white;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .footer-details img {
+    height: 100px;
+    width: 300px; }
+  .footer-details a {
+    color: white; }
+    .footer-details a:hover {
+      transition: 0.3s all ease-in-out;
+      color: #d91b5c; }
+  .footer-details .fa-facebook {
+    font-size: 4rem; }
+
+.about-header {
+  height: 150px;
+  color: white; }
+  .about-header .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    background-image: url(../images/header.PNG);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed; }
+  .about-header .header-text {
+    margin-top: 150px; }
+
+.about-text {
+  height: 330px;
+  margin: 0px 100px; }
+  .about-text h1 {
+    color: black;
+    font-family: "Roboto Slab";
+    margin-top: 170px; }
+
+.about-members {
+  height: 200px;
+  background-image: url(../images/header.PNG);
+  background-size: cover;
+  background-attachment: fixed; }
+  .about-members .btn {
+    transition: 0.3s all ease-in-out;
+    padding: 15px 20px;
+    border-radius: 0;
+    border: none;
+    margin-top: 70px;
+    background-color: rgba(217, 27, 92, 0.7);
+    font-size: 2.3rem;
+    font-family: "Roboto Slab"; }
+    .about-members .btn:hover {
+      background-color: #d91b5c; }
+
+.contact-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 300px;
+  background-image: url(../images/header.PNG);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom; }
+  .contact-header .header-text h1 {
+    color: white;
+    margin-top: 150px; }
+
+.contact-form {
+  position: relative;
+  height: 300px;
+  margin-top: -100px; }
+  .contact-form .btn-primary {
+    background-color: #d91b5c;
+    border-radius: 0;
+    border: none;
+    width: 100%; }
+
+.contact-info {
+  margin-top: 400px;
+  font-size: 3rem;
+  line-height: 50px;
+  height: 200px; }
+
+.map {
+  margin-top: 50px;
+  width: 100vw; }
+
+.blog-header {
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(../images/header.PNG);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; }
+  .blog-header .blog-text {
+    height: 400px; }
+    .blog-header .blog-text h1 {
+      padding-top: 170px;
+      color: white; }
+
+.projects {
+  position: relative;
+  margin-top: 400px;
+  height: 200px; }
+
+.finished-projects {
+  margin-top: 100px; }
+  .finished-projects .projects-text hr {
+    margin-bottom: 70px; }
+
+.projects-text h1 {
+  padding-top: 70px; }
+
+.projects-text hr {
+  border-top: 1px solid #d91b5c;
+  margin: 0px 33%; }
+
+.projects-layouts {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .projects-layouts .image {
+    position: relative;
+    transition: 0.3s all ease-in-out; }
+    .projects-layouts .image img {
+      margin: 10px;
+      height: 300px;
+      width: 500px;
+      box-shadow: 0px 3px 10px black; }
+    .projects-layouts .image h3 {
+      position: absolute;
+      left: 0;
+      top: 170px;
+      right: 0;
+      bottom: 0;
+      color: white;
+      margin: auto;
+      background-color: rgba(217, 27, 92, 0.5);
+      padding-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-size: 3rem;
+      font-family: "Roboto Slab";
+      transition: 0.3s all ease-in-out; }
+      .projects-layouts .image h3:hover {
+        top: 10px; }
+
+.members-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/header.PNG); }
+  .members-header h1 {
+    margin-top: 130px;
+    color: white; }
+
+.members {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 300px; }
+  .members img {
+    transition: 0.3s all ease-in-out;
+    margin: 30px;
+    height: 300px;
+    width: 400px;
+    box-shadow: 0px 5px 10px black;
+    cursor: pointer; }
+    .members img:hover {
+      -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+      transform: translateY(-2px); }
+  .members .image {
+    position: relative; }
+    .members .image h3 {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-transform: uppercase;
+      padding: 10px 20px;
+      font-size: 2.5rem;
+      cursor: pointer; }
+      .members .image h3:hover {
+        background-color: black; }
+    .members .image h4 {
+      position: absolute;
+      top: 250px;
+      left: 60px;
+      color: white;
+      background-color: #d91b5c;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      font-size: 1.7rem;
+      cursor: pointer; }
+
+.help-header {
+  position: absolute;
+  height: 300px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(../images/header.PNG); }
+  .help-header h1 {
+    color: white;
+    margin-top: 150px; }
+
+.help-methods {
+  margin-top: 400px; }
+  .help-methods hr {
+    margin: 20px 30%;
+    border-top: 2px solid #d91b5c; }
+  .help-methods h3 {
+    font-size: 2.5rem; }
+  .help-methods p {
+    font-size: 1.7rem; }
+  .help-methods .btn-primary {
+    transition: 0.3s all ease-in-out;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(217, 27, 92, 0.8);
+    font-size: 2rem;
+    padding: 10px 20px;
+    margin-top: 10px; }
+    .help-methods .btn-primary:hover {
+      -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+      transform: translateY(-2px);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
+  .help-methods .col-md-4 {
+    border-right: 1px solid #d91b5c;
+    transition: 0.3s all ease-in-out; }
+    .help-methods .col-md-4:hover {
+      background-color: rgba(217, 27, 92, 0.1); }
+  .help-methods .container .last {
+    border-right: none; }
+  .help-methods .fa-percent {
+    margin-top: 70px; }
+
+.bg {
+  height: 100vh; }
+  .bg .background-login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/login.jpg);
+    background-size: cover; }
+    .bg .background-login .site-login {
+      margin-top: 35vh;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 0; }
+      .bg .background-login .site-login h1 {
+        font-size: 4rem;
+        font-family: "Roboto Slab";
+        color: white; }
+      .bg .background-login .site-login .btn-primary {
+        background-color: rgba(217, 27, 92, 0.8);
+        border: 0;
+        border-radius: 0;
+        font-size: 2.5rem;
+        padding: 10px 100px;
+        margin-left: 180px; }
+
+.bg-projects {
+  position: relative;
+  height: 100vh; }
+  .bg-projects .background-projects {
+    position: absolute;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-image: url(../images/login.jpg);
+    background-attachment: fixed;
+    background-position: bottom; }
+    .bg-projects .background-projects h1 {
+      margin: auto;
+      margin-left: 47vw;
+      margin-top: 100px;
+      color: white; }
+    .bg-projects .background-projects .projects-index {
+      margin-top: 130px;
+      margin-left: 10%;
+      margin-right: 10%; }
+      .bg-projects .background-projects .projects-index .btn-success {
+        transition: 0.3s all ease-in-out;
+        font-size: 2.3rem;
+        padding: 10px 20px;
+        background-color: rgba(217, 27, 92, 0.8);
+        border: none;
+        border-radius: 0;
+        margin-bottom: 30px; }
+        .bg-projects .background-projects .projects-index .btn-success:hover {
+          -webkit-transform: translateY(-2px);
+          -ms-transform: translateY(-2px);
+          transform: translateY(-2px); }
+
+.create-header {
+  margin-top: -20px;
+  height: 200px;
+  background-image: url(../images/login.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom; }
+  .create-header h1 {
+    color: white;
+    padding-top: 100px; }
+
+.projects-form {
+  margin-top: 100px; }
+  .projects-form .btn-success {
+    background-color: rgba(217, 27, 92, 0.8);
+    border: none;
+    border-radius: 0;
+    padding: 10px 30px;
+    font-size: 2rem; }
+
+.go-top {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(217, 27, 92, 0.5);
+  font-size: 2rem;
+  padding: 10px 15px;
+  display: none; }
+
+a {
+  color: white; }
+  a:hover {
+    color: white; }
+
+.go-top:hover {
+  background-color: rgba(217, 27, 92, 0.8); }
+
+.project-view-header {
+  height: 300px;
+  margin-top: -20px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url(../images/header.PNG); }
+  .project-view-header h1 {
+    padding-top: 150px;
+    color: white; }
+
+.buttons {
+  margin: 50px; }
+  .buttons .btn-primary {
+    margin: 0 30px;
+    border: 0;
+    border-radius: 0;
+    font-size: 3rem; }
+  .buttons .btn-danger {
+    margin: 0 30px;
+    border: 0;
+    border-radius: 0;
+    font-size: 3rem; }

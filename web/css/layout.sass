@@ -1,0 +1,622 @@
+//Fonts 
+$primary-font: 'Roboto Slab'
+$primary-color: rgb(217, 27, 92)
+
+html,body
+    overflow-x: hidden
+
+
+//Reset 
+.container-fluid
+    margin: 0
+    padding: 0
+
+//Navbar
+.navbar-brand
+    img
+        height: 50px    
+        width: 150px
+
+.navbar 
+    border-bottom: none
+    height: 80px
+    background-color: rgba(white,0)
+    box-shadow: 0px 3px 10px rgba(black, 0.7)
+
+    ul 
+        margin-top: 17px
+        li
+            font-family: $primary-font
+            font-size: 1.78rem
+            transition: 0.5s all ease-in-out 
+            &:hover
+                border-bottom: 1px solid white    
+.navbar-inverse .navbar-nav > li > a
+    color: white
+
+    
+        
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus
+    background-color: rgba(white, 0)
+    border-bottom: 1px solid $primary-color
+
+.big
+    transition: 0.3s all ease-in-out
+    background-color: $primary-color
+//Index Header
+
+.index-header
+    height: 350px
+    .background
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        height: 500px
+        width: 100%
+        background:
+            image: url(../images/header.PNG)
+            size: cover
+            position: top
+            attachment: fixed 
+   
+    .header-content
+        margin: 150px 200px 0px 200px
+        color: white
+        h1
+            font-size: 4rem
+            font-family: $primary-font
+        h3 
+            font-family: $primary-font
+            font-size: 1.7rem
+        .btn-primary
+            transition: 0.3s all ease-in-out
+            background-color: rgba($primary-color, 0.7)
+            border: none
+            border-radius: 0
+            margin-top: 10px
+            margin-bottom: 10px
+            font-size: 2rem
+            padding: 10px 20px
+            
+            &:hover
+                background-color: rgba($primary-color, 1)
+        a 
+            color: white
+        .fa-facebook
+            transition: 0.3s all ease-in-out
+            margin-top: 40px
+            font-size: 5rem
+            &:hover
+                color: $primary-color
+
+// Index Learning
+.index-learning
+    h1
+        color: black
+        font-family: $primary-font
+        margin-top: 70px
+    i 
+        transition: 0.3s all ease-in-out
+        margin-top: 70px
+        font-size: 4.3rem
+        color: $primary-color
+        border: 2px dashed $primary-color
+        padding: 15px
+
+        &:hover
+            background-color: $primary-color
+            color: white
+    hr 
+        margin-left: 30px
+        margin-right: 30px
+        border-top: 1px solid $primary-color
+
+// Index Projects
+
+.index-projects
+    margin-top: 60px
+    background-color: rgba(black,0.7)
+    height: 500px
+
+    h1
+        margin-top: 50px
+        color: white
+        font-family: $primary-font
+    img 
+        height: 260px
+        width: 350px
+        box-shadow: 0px 5px 5px black
+        margin-top: 40px
+
+// Index signup button
+
+.index-signup
+    height: 300px
+    background:
+        image: url(../images/header.PNG)
+        size: cover
+        position: top
+        attachment: fixed 
+    
+    .btn-primary
+        transition: 0.3s all ease-in-out
+        margin-top: 130px
+        background-color: rgba(black,0)
+        font-size: 2.3rem
+        font-family: $primary-font
+        letter-spacing: 1px
+        border-radius: 0
+        border: 2px solid $primary-color
+        &:hover 
+            background-color: $primary-color
+
+//Partners
+.partners
+    height: 200px
+    display: flex
+    justify-content: space-around
+    h1 
+        color: black !important
+        font-family: $primary-font
+        margin-top: 20px
+    .resized
+        transition: 0.3s all ease-in-out
+        margin-top: 20px
+        height: 100px
+        width: 100px
+        filter: grayscale(100%)
+        &:hover
+            filter: grayscale(0%)
+
+// Main footer
+.footer
+    height: 30px
+    background-color: black
+    border-top: 0px
+    color: white
+
+.footer-details
+    padding-top: 50px
+    color: white
+    height: 300px
+    background-color: rgba(black,0.8)
+
+    img
+        height: 100px
+        width: 300px
+    
+    a 
+        color: white
+        &:hover
+            transition: 0.3s all ease-in-out
+            color: $primary-color
+
+    .fa-facebook
+        font-size: 4rem
+
+
+// About Header
+.about-header  
+    height: 150px
+    color: white
+    .background
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        height: 300px
+        width: 100%
+        background:
+            image: url(../images/header.PNG)
+            size: cover
+            position: bottom
+            attachment: fixed
+    .header-text
+        margin-top: 150px
+//About Text
+.about-text
+    height: 330px
+    margin: 0px 100px
+    h1 
+        color: black
+        font-family: $primary-font
+        margin-top: 170px
+
+// About Members Button
+.about-members
+    height: 200px
+    background:
+        image: url(../images/header.PNG)
+        size: cover
+        attachment: fixed
+    
+    .btn
+        transition: 0.3s all ease-in-out
+        padding: 15px 20px
+        border-radius: 0
+        border: none
+        margin-top: 70px
+        background-color: rgba($primary-color, 0.7)
+        font-size: 2.3rem
+        font-family: $primary-font
+        &:hover
+            background-color: rgba($primary-color, 1)
+
+
+// Contact Page
+.contact-header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    height: 300px
+    background:
+        image: url(../images/header.PNG)
+        size: cover
+        attachment: fixed
+        position: bottom
+    .header-text
+        h1
+            color: white
+            margin-top: 150px
+
+            
+.contact-form
+    position: relative
+    height: 300px
+    margin-top: -100px
+    .btn-primary
+        background-color: $primary-color
+        border-radius: 0
+        border: none
+        width: 100%
+
+.contact-info
+    margin-top: 400px
+    font-size: 3rem
+    line-height: 50px
+    height: 200px
+
+.map
+    margin-top: 50px
+    width: 100vw
+
+
+// Blog Header
+.blog-header
+    height: 400px
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background:
+        image: url(../images/header.PNG)
+        attachment: fixed
+        size: cover
+        position: center
+    
+    .blog-text
+        height: 400px
+        h1 
+            padding-top: 170px
+            color: white
+
+
+//Projects Header
+.projects
+    position: relative
+    margin-top: 400px
+    height: 200px
+
+.finished-projects
+    margin-top: 100px
+    .projects-text
+        hr 
+            margin-bottom: 70px
+.projects-text
+    h1
+        padding-top: 70px
+    hr 
+        border-top: 1px solid $primary-color
+        margin: 0px 33%
+
+.projects-layouts
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    .image
+        position: relative
+        transition: 0.3s all ease-in-out
+        img
+            margin: 10px
+            height: 300px
+            width: 500px
+            box-shadow: 0px 3px 10px black
+                
+
+        h3
+            position: absolute
+            left: 0
+            top: 170px
+            right: 0
+            bottom: 0
+            color: white
+            margin: auto
+            background-color: rgba($primary-color, 0.5)
+            padding-top: 10px
+            margin-left: 10px
+            margin-right: 10px
+            margin-bottom: 10px
+            font-size: 3rem
+            font-family: $primary-font
+            transition: 0.3s all ease-in-out
+
+            &:hover
+                top: 10px
+
+
+
+// Members Page
+.members-header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    height: 300px
+    background:
+        attachment: fixed
+        size: cover
+        position: center
+        image: url(../images/header.PNG)
+
+    h1 
+        margin-top: 130px
+        color: white
+
+.members
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-top: 300px
+    img 
+        transition: 0.3s all ease-in-out
+        margin: 30px
+        height: 300px
+        width: 400px                
+        box-shadow: 0px 5px 10px black
+        cursor: pointer
+        &:hover
+            transform: translateY(-2px)
+    
+    .image
+        position: relative
+        h3
+            position: absolute
+            top: 200px
+            left: 30px
+            color: white
+            background-color: rgba(black, 0.7)
+            text-transform: uppercase
+            padding: 10px 20px
+            font-size: 2.5rem
+            cursor: pointer
+            &:hover
+                background-color: black
+        h4
+            position: absolute
+            top: 250px
+            left: 60px
+            color: white
+            background-color: $primary-color
+            text-transform: uppercase
+            padding: 10px 20px
+            font-size: 1.7rem
+            cursor: pointer
+
+
+// Wanna help page 
+.help-header
+    position: absolute
+    height: 300px
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: 
+        size: cover
+        position: center
+        attachment: fixed
+        image: url(../images/header.PNG)
+    
+    h1 
+        color: white
+        margin-top: 150px
+
+.help-methods
+    margin-top: 400px
+    hr 
+        margin: 20px 30%
+        border-top: 2px solid $primary-color
+    h3
+        font-size: 2.5rem  
+    
+    p
+        font-size: 1.7rem
+    .btn-primary
+        transition: 0.3s all ease-in-out
+        border-radius: 0
+        border: none
+        background-color: rgba($primary-color, 0.8)
+        font-size: 2rem
+        padding: 10px 20px
+        margin-top: 10px
+        &:hover
+            transform: translateY(-2px)
+            box-shadow: 0px 5px 10px rgba(black, 0.3)
+    .col-md-4
+        border-right: 1px solid $primary-color
+        transition: 0.3s all ease-in-out
+        &:hover
+            background-color: rgba($primary-color, 0.1)
+    .container
+        .last
+            border-right: none
+
+    .fa-percent
+        margin-top: 70px
+
+
+// Login Panel
+.bg
+    height: 100vh
+    .background-login
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background:
+            image: url(../images/login.jpg)
+            size: cover
+        .site-login
+            margin-top: 35vh
+            background-color: rgba(white, 0.5)
+            border: none
+            border-radius: 0
+            h1 
+                font-size: 4rem
+                font-family: $primary-font
+                color: white
+            
+            .btn-primary
+                background-color: rgba($primary-color,0.8)
+                border: 0
+                border-radius: 0
+                font-size: 2.5rem
+                padding: 10px 100px
+                margin-left: 180px
+            
+
+// Projects admin panel
+.bg-projects
+    position: relative
+    height: 100vh
+    .background-projects
+        position: absolute
+        height: 200px
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0 
+        background: 
+            size: cover
+            image: url(../images/login.jpg)
+            attachment: fixed
+            position: bottom
+        h1 
+            margin: auto
+            margin-left: 47vw
+            margin-top: 100px
+            color: white
+        .projects-index
+            margin-top: 130px
+            margin-left: 10%
+            margin-right: 10%
+            .btn-success
+                transition: 0.3s all ease-in-out
+                font-size: 2.3rem
+                padding: 10px 20px
+                background-color: rgba($primary-color, 0.8)
+                border: none
+                border-radius: 0
+                margin-bottom: 30px
+                &:hover
+                    transform: translateY(-2px)
+
+//Project Create
+.create-header
+    margin-top: -20px
+    height: 200px
+    background:
+        image: url(../images/login.jpg)
+        size: cover
+        attachment: fixed
+        position: bottom
+
+    h1
+        color: white
+        padding-top: 100px
+
+//Project View
+
+
+// Projects Form    
+.projects-form
+    margin-top: 100px
+    .btn-success
+        background-color: rgba($primary-color, 0.8)
+        border: none
+        border-radius: 0
+        padding: 10px 30px
+        font-size: 2rem
+
+//Back to top
+.go-top 
+	position: fixed
+	bottom: 2em
+	right: 2em
+	text-decoration: none
+	color: white
+	background-color: rgba($primary-color, 0.5)
+	font-size: 2rem
+	padding: 10px 15px
+	display: none
+a
+    color: white
+    
+    &:hover
+        color: white
+
+
+.go-top:hover    
+	background-color: rgba($primary-color, 0.8)
+
+
+
+// Projects view, blog-like post
+.project-view-header
+    height: 300px
+    margin-top: -20px
+    background:
+        size: cover
+        attachment: fixed
+        position: center
+        image: url(../images/header.PNG)
+    
+    h1
+        padding-top: 150px
+        color: white
+
+.buttons
+    margin: 50px
+    
+    .btn-primary
+        margin: 0 30px
+        border: 0
+        border-radius: 0
+        font-size: 3rem
+    .btn-danger
+        margin: 0 30px
+        border: 0
+        border-radius: 0
+        font-size: 3rem
+
+.project-post

@@ -3,11 +3,13 @@
 namespace app\controllers;
 
 use Yii;
+use app\models\Projects;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Emails;
 
 class SiteController extends Controller
 {
@@ -102,10 +104,20 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
+        $model = new Emails();
+        //$model->contact(Yii::$app->params['adminEmail'])
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $model->save();
+            Yii::$app->mailer->compose()
+            ->setFrom($model->email)
+            ->setTo('gabrieldornianu@yahoo.com')
+            ->setSubject($model->subject)
+            ->setTextBody(
+            'You have a new mail from: '.$model->name.
+            'Subject: '.$model->subject.
+            'Message: '.$model->message
+            )
+            ->send();
             return $this->refresh();
         }
         return $this->render('contact', [
@@ -121,5 +133,10 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionHelp()
+    {
+        return $this->render('help');
     }
 }
