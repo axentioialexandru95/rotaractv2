@@ -25,9 +25,11 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+
     <?php
+    
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => Html::img('images/logo.png'),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -36,8 +38,12 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
+            ['label' => 'Acasa', 'url' => ['/site/index']],
+            ['label' => 'Despre Noi', 'url' => ['/site/about']],
+            ['label' => 'Proiecte', 'url' => ['/blog/index']],
+            ['label' => 'Membri', 'url' => ['/people/index']],
+            ['label' => 'Inscriere', 'url' => ['/people/index']],
+            ['label' => 'Vrei sa ajuti?', 'url' => ['/site/help']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
@@ -56,19 +62,38 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
+    <div class="container-fluid">
         <?= $content ?>
+        <div class="container">
+            <h1 class="text-center">Parteneri</h1>
+            <div class="partners">
+                <img src="images/partner1.png" alt="partner-name" class="resized">
+                <img src="images/partner2.png" alt="partner-name" class="resized">
+                <img src="images/partner3.png" alt="partner-name" class="resized">
+            </div>
+        </div>
     </div>
 </div>
-
+<div class="container-fluid footer-details text-center">
+        <div class="col-md-4">
+            <img src="images/logo.png" alt="partner-name" class="resized">
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">Despre</h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, obcaecati, officia. Minima natus sapiente saepe velit debitis, qui, explicabo nobis temporibus numquam alias, nesciunt fugiat. Eius labore blanditiis quidem vel.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Social</h3>
+            <hr>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+    </div>
+<a href="#" class="go-top"> <i class="fa fa-arrow-up"></i></a>
 <footer class="footer">
+    
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="text-center">&copy; The Mojo Studio SRL <?= date('Y') ?></p>
     </div>
 </footer>
 
