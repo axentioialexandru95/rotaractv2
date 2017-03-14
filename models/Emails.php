@@ -5,23 +5,25 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "users".
+ * This is the model class for table "emails".
  *
+ * @property integer $id
  * @property string $name
- * @property string $surname
- * @property string $phoneNumber
- * @property string $emailAddress
+ * @property string $email
+ * @property string $subject
  * @property string $message
  */
-class Register extends \yii\db\ActiveRecord
+class Emails extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
 
+    public $verifyCode;
+
     public static function tableName()
     {
-        return 'users';
+        return 'emails';
     }
 
     /**
@@ -30,9 +32,10 @@ class Register extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'surname', 'phoneNumber', 'emailAddress', 'message'], 'required'],
+            [['name', 'email', 'subject', 'message'], 'required'],
             [['message'], 'string'],
-            [['name', 'surname', 'phoneNumber', 'emailAddress'], 'string', 'max' => 100]
+            //['verifyCode', 'captcha'],
+            [['name', 'email', 'subject'], 'string', 'max' => 255],
         ];
     }
 
@@ -42,10 +45,10 @@ class Register extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+            'id' => 'ID',
             'name' => 'Name',
-            'surname' => 'Surname',
-            'phoneNumber' => 'Phone Number',
-            'emailAddress' => 'Email Address',
+            'email' => 'Email',
+            'subject' => 'Phone',
             'message' => 'Message',
         ];
     }
