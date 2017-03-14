@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\web\UploadedFile;
+
 /**
  * This is the model class for table "users".
  *
@@ -38,9 +39,10 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'surname', 'phone', 'email', 'description', 'reason', 'image', 'cv', 'position'], 'required'],
+            [['name', 'surname', 'phone', 'email', 'description', 'reason', 'image_file', 'cv_file', 'position'], 'required'],
             [['description', 'reason'], 'string'],
-            [['cv_file', 'image_file'], 'file'],
+            [['cv_file'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf', 'maxSize' => 500 * 50 * 1024 * 2],
+            [['image_file'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg', 'maxSize' => 100* 20 * 1024 * 2],
             [['name', 'surname', 'phone', 'email', 'image'], 'string', 'max' => 255],
         ];
     }
@@ -52,17 +54,17 @@ class Users extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'surname' => 'Surname',
-            'phone' => 'Phone',
+            'name' => 'Nume',
+            'surname' => 'Prenume',
+            'phone' => 'Telefon',
             'email' => 'Email',
-            'description' => 'Description',
-            'reason' => 'Reason',
-            'image' => 'Image',
-            'cv' => 'Cv',
-            'position' => 'Position',
-            'cv_file' => 'Cv',
-            'image_file' => 'Image'
+            'description' => 'Spune-ne cate ceva despre tine',
+            'reason' => 'De ce vrei sa ni te alaturi ?',
+            //'image' => 'Imagine cu tine',
+            //'cv' => 'Cv-ul tau',
+            'position' => 'Pozitie',
+            'cv_file' => 'Cv-ul tau',
+            'image_file' => 'O imagine cu tine'
         ];
     }
 }

@@ -15,8 +15,8 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'surname') ?>
         <?= $form->field($model, 'phone') ?>
         <?= $form->field($model, 'email') ?>
-        <?= $form->field($model, 'description') ?>
-        <?= $form->field($model, 'reason') ?>
+        <?= $form->field($model, 'description')->textarea(['cols'=>8]) ?>
+        <?= $form->field($model, 'reason')->textarea(['cols'=>8]) ?>
         <?= $form->field($model, 'position') ?>
         <?= $form->field($model, 'cv_file')->fileInput() ?>
         <?= $form->field($model, 'image_file')->fileInput() ?>
