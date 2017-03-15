@@ -307,23 +307,30 @@ html, body {
       height: 300px;
       width: 500px;
       box-shadow: 0px 3px 10px black; }
+    .projects-layouts .image a {
+      text-decoration: none; }
     .projects-layouts .image h3 {
       position: absolute;
+      color: black;
       left: 0px;
-      top: 170px;
+      background-color: rgba(217, 27, 92, 0.2);
+      top: 20px;
       right: 0;
       bottom: 0;
       color: white;
       margin: auto;
-      background-color: rgba(217, 27, 92, 0.5);
-      padding-top: 10px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
+      padding-top: 130px;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 20px;
       font-size: 3rem;
       font-family: "Roboto Slab";
       transition: 0.3s all ease-in-out; }
       .projects-layouts .image h3:hover {
+        background-color: rgba(217, 27, 92, 0.7);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
         top: 10px; }
 
 .list-view {
@@ -382,7 +389,6 @@ html, body {
       left: 30px;
       color: white;
       background-color: rgba(0, 0, 0, 0.7);
-      text-transform: uppercase;
       padding: 10px 20px;
       font-size: 2.5rem;
       cursor: pointer; }
@@ -398,6 +404,49 @@ html, body {
       padding: 10px 20px;
       font-size: 1.7rem;
       cursor: pointer; }
+
+.member-overlay {
+  position: fixed;
+  background: rgba(217, 27, 92, 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2; }
+  .member-overlay .modal {
+    position: relative;
+    display: initial;
+    max-width: 1000px;
+    max-height: 800px;
+    background: white;
+    margin: auto;
+    padding: 30px; }
+    .member-overlay .modal .close-btn {
+      position: absolute;
+      top: 0;
+      left: 800px;
+      right: 0;
+      font-size: 4rem;
+      cursor: pointer; }
+    .member-overlay .modal img {
+      text-align: center;
+      height: 300px;
+      border: 1px solid rgba(128, 128, 128, 0.5);
+      padding: 5px; }
+    .member-overlay .modal .text-box {
+      text-align: left; }
+    .member-overlay .modal .modal-position {
+      background-color: rgba(217, 27, 92, 0.8);
+      margin: 10px 42%;
+      color: white;
+      font-size: 2rem; }
 
 .help-header {
   position: absolute;

@@ -160,7 +160,7 @@ class AssetManager extends Component
      * directory is always up-to-date. Do not set this to true on production servers as it will
      * significantly degrade the performance.
      */
-    public $forceCopy = false;
+    public $forceCopy = true;
     /**
      * @var bool whether to append a timestamp to the URL of every published asset. When this is true,
      * the URL of a published asset may look like `/path/to/asset?v=timestamp`, where `timestamp` is the

@@ -30,7 +30,8 @@ $this->title = 'Proiecte';
     <?php echo ListView::widget([
         'dataProvider' => $dataProvider,
         'summary' => false,
-        'itemView' => '_projects'
+        'itemView' => '_projects',
+        
 
     ]); ?>
 

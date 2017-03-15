@@ -8,3 +8,12 @@ $(window).scroll(function() {
         $(".navbar").removeClass('big');
     }
 });
+
+$(document).ready(function () {
+    $('.image').click(function(){
+        $('.member-overlay').css('display', 'flex');
+    });
+    $('.close-btn').click(function(){
+        $('.member-overlay').css('display', 'none');
+    });
+});
