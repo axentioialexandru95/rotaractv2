@@ -40,5 +40,31 @@ class BlogController extends Controller
         
        // return $this->render('index',['projects'=>$projects]);
     }
+    
+    public function actionPost($id)
+    {  
+        /*
+       $post = Yii::$app->db->createCommand('SELECT * FROM `projects` ');
 
+       $postprovider = new ArrayDataProvider([
+           'allModels' => $post->queryAll(),
+       ]);
+        
+        return $this->render('post', [
+            'postdataProvider' => $postprovider,
+        ]);
+        
+*/
+        
+        $model = Projects::findOne($id);
+        if ($model === null) {
+            throw new NotFoundHttpException;
+        }
+
+        return $this->render('post', [
+            'model' => $model,
+        ]);
+        
+       
+    }
 }

@@ -8,4 +8,3 @@ return [
     'charset' => 'utf8',
 ];
 
-$sql  = 'SELECT * FROM `projects` WHERE STATUS = \'active\'';

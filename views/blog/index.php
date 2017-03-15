@@ -31,8 +31,6 @@ $this->title = 'Proiecte';
         'dataProvider' => $dataProvider,
         'summary' => false,
         'itemView' => '_projects',
-        
-
     ]); ?>
 
 </div>
@@ -50,7 +48,6 @@ $this->title = 'Proiecte';
         'dataProvider' => $seconddataProvider,
         'summary' => false,
         'itemView' => '_projects'
-
     ]); ?>
 
 </div>

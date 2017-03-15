@@ -412,7 +412,9 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -648,3 +650,38 @@ a {
 
 .members-create {
   margin-top: 30px; }
+
+.post-header {
+  position: relative;
+  height: 300px;
+  background-image: url("../images/header.PNG");
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.post-body {
+  position: relative;
+  margin-top: -150px;
+  background-color: white;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); }
+  .post-body img {
+    height: 400px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px; }
+  .post-body h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase; }
+  .post-body hr {
+    margin: 30px 45%;
+    border-top: 2px solid rgba(217, 27, 92, 0.3); }
+  .post-body .fa-circle {
+    color: rgba(0, 128, 0, 0.5);
+    margin-left: 30px;
+    margin-bottom: 20px; }
+
+.post-text {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 100px;
+  margin-left: 10%;
+  margin-right: 10%; }
