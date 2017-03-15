@@ -25,7 +25,7 @@ class UsersController extends \yii\web\Controller
                 $model->cv = 'uploads/'.$model->cv_file->baseName.'.'.$model->cv_file->extension;
                 $model->image = 'uploads/'.$model->image_file->baseName.'.'.$model->image_file->extension;
                 $model->save(false);
-                $this->refresh();
+                //$this->refresh();
             }
         }
         return $this->render('users', [

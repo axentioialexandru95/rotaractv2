@@ -60,8 +60,8 @@ class Users extends \yii\db\ActiveRecord
             'email' => 'Email',
             'description' => 'Spune-ne cate ceva despre tine',
             'reason' => 'De ce vrei sa ni te alaturi ?',
-            //'image' => 'Imagine cu tine',
-            //'cv' => 'Cv-ul tau',
+            'image' => 'Imagine cu tine',
+            'cv' => 'Cv-ul tau',
             'position' => 'Pozitie',
             'cv_file' => 'Cv-ul tau',
             'image_file' => 'O imagine cu tine'
