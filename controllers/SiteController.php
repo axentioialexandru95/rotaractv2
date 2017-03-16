@@ -108,7 +108,7 @@ class SiteController extends Controller
         //$model->contact(Yii::$app->params['adminEmail'])
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->save();
-            Yii::$app->mailer->compose()
+            /*Yii::$app->mailer->compose()
             ->setFrom($model->email)
             ->setTo('gabrieldornianu@yahoo.com')
             ->setSubject($model->subject)
@@ -117,7 +117,8 @@ class SiteController extends Controller
             'Subject: '.$model->subject.
             'Message: '.$model->message
             )
-            ->send();
+            ->send();*/
+            Yii::$app->session->setFlash('contactFormSubmitted', 'Multumim pentru feedback');
             return $this->refresh();
         }
         return $this->render('contact', [
