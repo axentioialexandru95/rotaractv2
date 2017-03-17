@@ -11,7 +11,14 @@ use yii\widgets\ActiveForm;
     <h1><?= Html::encode($this->title) ?></h1>
 </div>
 <div class="users container">
-    
+
+    <?php if(Yii::$app->session->hasFlash('success')): ?>
+        <div class="alert alert-success alert-dismissable" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <?= Yii::$app->session->getFlash('success') ?>
+        </div>
+    <?php endif; ?>
+
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
         <?= $form->field($model, 'name') ?>
