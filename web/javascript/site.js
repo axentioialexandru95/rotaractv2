@@ -16,4 +16,5 @@ $(document).ready(function () {
     $('.close-btn').click(function(){
         $('.member-overlay').css('display', 'none');
     });
+
 });

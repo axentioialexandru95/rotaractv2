@@ -466,7 +466,9 @@ html, body {
     margin-top: 150px; }
 
 .help-methods {
-  margin-top: 400px; }
+  margin-top: 400px;
+  margin-left: 50px;
+  margin-right: 50px; }
   .help-methods hr {
     margin: 20px 30%;
     border-top: 2px solid #d91b5c; }

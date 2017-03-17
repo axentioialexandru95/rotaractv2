@@ -10,9 +10,9 @@ $this->title = 'Rotaract';
     <div class="header-content text-center">
         <h1>We are</h1>
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorum, eveniet voluptatem vitae tenetur dolor nesciunt. Qui inventore autem libero, laboriosam tempore fugit, obcaecati dignissimos consequatur eligendi in aut, nihil.</h3>
-        <button class="btn btn-primary">Afla mai multe</button>
+        <?= Html::a('Afla mai multe', ['/site/about'], ['class'=>'href btn btn-primary']) ?>
         <br>
-        <a href="#"><i class="fa fa-facebook"></i></a>
+        <?= Html::a('', ['/site/about'], ['class'=>'fa fa-facebook']) ?>
     </div> 
 </div>
 
@@ -63,5 +63,5 @@ $this->title = 'Rotaract';
 </div>
 
 <div class="index-signup text-center">
-    <button class="btn btn-primary ">Inscriere</button>
+    <?= Html::a('Inscriere', ['/users/users'], ['class'=>'btn btn-primary']) ?>
 </div>
