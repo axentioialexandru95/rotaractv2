@@ -144,4 +144,12 @@ class SiteController extends Controller
     {
         return $this->render('help');
     }
+
+    public function actionDownload()
+    {
+        $path = Yii::getAlias('@webroot') . '/';   
+        $file = $path . '/downloads/contract.docx';
+    Yii::$app->response->sendFile($file);
+       
+    }
 }

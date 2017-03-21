@@ -18,7 +18,7 @@ $this->title = 'Vrei sa ajuti?';
             <h3><i class="fa fa-black-tie"> Esti salariat?</i></h3>
             <hr>
             <p class="text-left">Și tu poți ajuta prin redirecționarea unei părticele din impozitul pe care îl plătești către noi. Mai exact, depui la ANAF o cerere privind destinația sumei reprezentând până 2% din impozitul anual. Nu te costă nimic! Și ca să facem lucrurile cât mai ușoare, am completat noi formularul 230 cu datele asociației. Trebuie doar completat și semnat de tine. Dacă nu ai timp să mergi la ANAF, trimite-o nouă prin poștă sau personal printr-un membru și o ducem noi.</p>
-            <button class="btn btn-primary">Descarca Formularul</button>
+            <?= Html::a('Download',['site/download'], ['class'=> 'btn btn-primary']);?>
         </div>
         <div class="col-md-4">
             <h3><i class="fa fa-building"> Ai o firmă?</i></h3>
@@ -37,14 +37,14 @@ $this->title = 'Vrei sa ajuti?';
 Denumire entitate nonprofit: ASOCIATIA ROTARACT CLUB SUCEAVA BUCOVINA
 Cod de identificare fiscală: 33026414
 Cont bancar (IBAN): RO34UGBI0000332009221RON</p>
-            <button class="btn btn-primary">Apasa aici</button>
+            
        </div>
     </div>
     <div class="container other-methods text-center">
         <h3><i class="fa fa-percent"> Ajută-ne altfel!</i></h3>
         <hr>
         <p class="text-left">Mai sunt moduri în care poți să contribui la proiectele și activitățile noastre. Ai o jucărie veche? Noi putem să-i găsim o nouă casă. Niște haine sau cărți de care nu mai ai nevoie? Vom găsi noi cineva care are nevoie și va aprecia gestul. Ai o idee despre un proiect benefic pentru comunitatea locală? O așteptăm cu drag.</p>
-        <button class="btn btn-primary">Apasa aici</button>
+        
     </div>
 </div>
 <hr>
