@@ -26,7 +26,8 @@ class AppAsset extends AssetBundle
     ];
     
     public $js = [
-        '//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+        
+        '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
         'javascript/site.js',
         'javascript/backtotop.js',
 

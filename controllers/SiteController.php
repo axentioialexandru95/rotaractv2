@@ -3,13 +3,17 @@
 namespace app\controllers;
 
 use Yii;
+use mPDF;
 use app\models\Projects;
+use app\models\Contracts;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\data\ArrayDataProvider;
+use yii\data\ActiveDataProvider;
+use yii\db\ActiveRecord;
 
 class SiteController extends Controller
 {
@@ -144,12 +148,52 @@ class SiteController extends Controller
     {
         return $this->render('help');
     }
+    public function actionContract()
+    {
+        $this->layout = false;
+
+        //$contract = Yii::$app->db->createCommand('SELECT * FROM `contracts`');
+        $model = new Contracts();
+
+        
+       
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                if($model->save()){
+
+                 return $this->render('pdf',[
+                'model' => $model,
+                 ]);
+
+
+                }
+                // form inputs are valid, do something here   
+            }
+        }
+
+        return $this->render('ContractForm', [
+            'model' => $model,
+        ]);
+    }
+    
+
+    public function actionPdf()
+    {
+        $mpdf = new mPDF;
+        $mpdf->SetImportUse();
+        $mpdf->SetDocTemplate('contract2.pdf',true);
+        $mpdf->WriteHTML('sample text');
+        $mpdf->WriteText(5,5,'hey');
+        $mpdf->AddPage();
+        $mpdf->Output();
+        exit;
+    }
 
     public function actionDownload()
     {
         $path = Yii::getAlias('@webroot') . '/';   
         $file = $path . '/downloads/contract.docx';
-    Yii::$app->response->sendFile($file);
+        Yii::$app->response->sendFile($file);
        
     }
 }

@@ -1,19 +1,35 @@
 <?php
 
 use yii\helpers\Html;
-
+use yii\bootstrap\Modal;
+use yii\helpers\Url;
 
 $this->title = 'Vrei sa ajuti?';
 
 
 ?>
 
+<?php 
+
+    Modal::begin([
+        'header'=>'<h3>Form</h3>',
+        'id'    =>'modal',
+        'size'  =>'modal-lg',
+    ]);
+
+    echo "<div id='modalContent'></div>";
+
+    Modal::end();
+
+?>
+
+
 <div class="help-header">
     <h1 class="text-center">Vrei sa ajuti?</h1>
 </div>
 
 <div class="help-methods">
-    <div class="container-flex text-center">
+    <div class="container-fluid text-center">
           <div class="col-md-4">
             <h3><i class="fa fa-black-tie"> Esti salariat?</i></h3>
             <hr>
@@ -28,7 +44,7 @@ $this->title = 'Vrei sa ajuti?';
 - 0,5% din cifra de afaceri
 <br>Astfel, în loc să plătești o bucățică din impozit statului, o faci direct în contul nostru și ne susții în ce ne-am propus!
 <br>Ca să facem lucrurile mai simple, am pregătit mai jos un formular pe care îl completezi și generezi automat contractul de sponsorizare de care ai nevoie la contabilitate. Faci un print, ne trimiți și nouă pe email o copie cu semnătura ta si asta e tot.</p>
-            <button class="btn btn-primary">Completeaza formularul</button>
+            <?= Html::button('Completeaza formularul', ['value'=>Url::to('index.php?r=site/contract'), 'class'=> 'btn btn-primary', 'id'=>'modalButton']);?>
         </div>
         <div class="col-md-4 last">
             <h3><i class="fa fa-user"> Obții venituri din activități independente?</i></h3>
@@ -40,11 +56,12 @@ Cont bancar (IBAN): RO34UGBI0000332009221RON</p>
             
        </div>
     </div>
-    <div class="container other-methods text-center">
+    
+</div>
+<div class="container other-methods text-center">
         <h3><i class="fa fa-percent"> Ajută-ne altfel!</i></h3>
         <hr>
         <p class="text-left">Mai sunt moduri în care poți să contribui la proiectele și activitățile noastre. Ai o jucărie veche? Noi putem să-i găsim o nouă casă. Niște haine sau cărți de care nu mai ai nevoie? Vom găsi noi cineva care are nevoie și va aprecia gestul. Ai o idee despre un proiect benefic pentru comunitatea locală? O așteptăm cu drag.</p>
         
     </div>
-</div>
 <hr>

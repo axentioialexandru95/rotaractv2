@@ -4,7 +4,7 @@ return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=rotaract',
     'username' => 'root',
-    'password' => 'lifewarrior95',
+    'password' => '',
     'charset' => 'utf8',
 ];
 

@@ -10,11 +10,10 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function () {
-    $('.image').click(function(){
-        $('.member-overlay').css('display', 'flex');
-    });
-    $('.close-btn').click(function(){
-        $('.member-overlay').css('display', 'none');
+    $('#modalButton').click(function(){
+        $('#modal').modal('show')
+            .find('#modalContent')
+            .load($(this).attr('value'));
     });
 
 });

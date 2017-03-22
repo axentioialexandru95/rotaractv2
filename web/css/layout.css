@@ -471,7 +471,7 @@ html, body {
   margin-right: 50px; }
   .help-methods hr {
     margin: 20px 30%;
-    border-top: 2px solid #d91b5c; }
+    border-top: 1px solid #d91b5c; }
   .help-methods h3 {
     font-size: 2.5rem; }
   .help-methods p {
@@ -490,14 +490,20 @@ html, body {
       transform: translateY(-2px);
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
   .help-methods .col-md-4 {
-    border-right: 1px solid #d91b5c;
     transition: 0.3s all ease-in-out; }
     .help-methods .col-md-4:hover {
       background-color: rgba(217, 27, 92, 0.1); }
-  .help-methods .container .last {
-    border-right: none; }
   .help-methods .fa-percent {
     margin-top: 70px; }
+
+.other-methods {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .other-methods p {
+    font-size: 1.7rem; }
+  .other-methods hr {
+    margin: 10px 30%;
+    border-top: 1px solid #d91b5c; }
 
 .bg {
   height: 100vh; }
