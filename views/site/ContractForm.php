@@ -8,12 +8,11 @@ use yii\widgets\ActiveForm;
 /* @var $form ActiveForm */
 ?>
 
-<h1><?=$model['company_name']?></h1>
     <div class="site-ContractForm">
-
         <?php $form = ActiveForm::begin(); ?>
 
             <?= $form->field($model, 'company_name') ?>
+            <?= $form->field($model, 'company_email') ?>
             <?= $form->field($model, 'company_address') ?>
             <?= $form->field($model, 'company_nr') ?>
             <?= $form->field($model, 'CUI') ?>

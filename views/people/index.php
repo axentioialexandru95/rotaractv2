@@ -1,10 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-
+use yii\helpers\Url;
 
 $this->title = 'Vrei sa ajuti?';
-
 
 ?>
 
@@ -16,11 +15,9 @@ $this->title = 'Vrei sa ajuti?';
 
     <?php foreach ($members as $member): ?>
     <div class="image">
-    
-    <img src="<?= $member->image ?>"  alt="<?= $member->name ?>">
-    
-    <h3><?= $member->name ?> <?= $member->surname ?></h3>
-    <?= Html::a('Touch Me', ['/people/info', 'id'=> $member->id ], ['class'=>'href']) ?>
+
+    <?= Html::a(Html::img($member->image,['alt'=>$member->name]), ['/people/info', 'id'=> $member->id], ['class'=>'href']) ?>
+    <h3><?= $member->name.''.$member->surname ?></h3>
     <h4><?= $member->position ?></h4>
     </div>
     </a>

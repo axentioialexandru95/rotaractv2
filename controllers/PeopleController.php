@@ -24,8 +24,6 @@ class PeopleController extends Controller
 
     public function actionInfo($id)
     {
-        $this->layout = false;
-                
         $model = Members::findOne($id);
         if ($model === null) {
             throw new NotFoundHttpException;

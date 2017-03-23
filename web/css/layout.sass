@@ -433,45 +433,6 @@ html,body
             font-size: 1.7rem
             cursor: pointer
 
-.member-overlay
-    position: fixed
-    background: fade-out($primary-color, 0.7)
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 2
-    
-    .modal
-        position: relative
-        display: initial
-        max-width: 1000px
-        max-height: 800px
-        background: white
-        margin: auto
-        padding: 30px
-        .close-btn
-            position: absolute
-            top: 0
-            left: 800px
-            right: 0
-            font-size: 4rem
-            cursor: pointer
-        img 
-            text-align: center
-            height: 300px
-            border: 1px solid rgba(gray, 0.5)
-            padding: 5px
-        .text-box
-            text-align: left
-        .modal-position
-            background-color: rgba($primary-color, 0.8)
-            margin: 10px 42%
-            color: white
-            font-size: 2rem
 
 // Wanna help page 
 .help-header
@@ -745,3 +706,31 @@ a
     margin-left: 10%
     margin-right: 10%
 
+
+
+// Person index details
+.member-image
+    background-color: white
+    box-shadow: 0px 0px 7px rgba(black, 0.2) 
+    padding-top: 50px
+    position: relative
+    z-index: 2
+    margin-top: 200px
+    margin-bottom: 100px
+    img
+        height: 300px
+        width: 400px
+    hr
+        margin: 20px 30%
+        border-top: 1px solid rgba($primary-color,0.4)
+    .text-box
+        margin-left: 20%
+        text-align: left !important
+        margin-top: 50px
+        padding-bottom: 100px
+    .position
+        background-color: rgba($primary-color,0.8)
+        color: white
+        font-size: 18px
+        margin: 15px 45%
+        padding: 10px 20px

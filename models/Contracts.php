@@ -3,7 +3,6 @@
 namespace app\models;
 
 use Yii;
-use yii\base\Model;
 
 /**
  * This is the model class for table "contracts".
@@ -16,10 +15,10 @@ use yii\base\Model;
  * @property string $company_representative
  * @property string $representative_function
  * @property integer $payment
+ * @property string $company_email
  */
 class Contracts extends \yii\db\ActiveRecord
 {
-
     /**
      * @inheritdoc
      */
@@ -34,9 +33,9 @@ class Contracts extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['company_name', 'company_address', 'company_nr', 'CUI', 'company_representative', 'representative_function', 'payment'], 'required'],
+            [['company_name', 'company_address', 'company_nr', 'CUI', 'company_representative', 'representative_function', 'payment', 'company_email'], 'required'],
             [['company_nr', 'CUI', 'payment'], 'integer'],
-            [['company_name', 'company_address', 'company_representative', 'representative_function'], 'string', 'max' => 255],
+            [['company_name', 'company_address', 'company_representative', 'representative_function', 'company_email'], 'string', 'max' => 255],
         ];
     }
 
@@ -54,6 +53,7 @@ class Contracts extends \yii\db\ActiveRecord
             'company_representative' => 'Company Representative',
             'representative_function' => 'Representative Function',
             'payment' => 'Payment',
+            'company_email' => 'Company Email',
         ];
     }
 
