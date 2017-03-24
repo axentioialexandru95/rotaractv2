@@ -53,7 +53,6 @@ class ProjectsController extends Controller
         $searchModel = new ProjectsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-
         if (Yii::$app->user->isGuest) {
 
         echo "This page does not exist. ";

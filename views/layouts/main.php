@@ -24,7 +24,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="wrap animsition">
 
     <?php
     
@@ -42,7 +42,7 @@ AppAsset::register($this);
             ['label' => 'Despre Noi', 'url' => ['/site/about']],
             ['label' => 'Proiecte', 'url' => ['/blog/index']],
             ['label' => 'Membri', 'url' => ['/people/index']],
-            ['label' => 'Inscriere', 'url' => ['/people/index']],
+            ['label' => 'Inscriere', 'url' => ['/users/users']],
             ['label' => 'Vrei sa ajuti?', 'url' => ['/site/help']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (

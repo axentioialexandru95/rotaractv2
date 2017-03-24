@@ -19,7 +19,7 @@ class ProjectsSearch extends Projects
     {
         return [
             [['id'], 'integer'],
-            [['name', 'date', 'image', 'body', 'status'], 'safe'],
+            [['name', 'date', 'status'], 'safe'],
         ];
     }
 
@@ -65,7 +65,6 @@ class ProjectsSearch extends Projects
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'image', $this->image])
-            ->andFilterWhere(['like', 'body', $this->body])
             ->andFilterWhere(['like', 'status', $this->status]);
 
         return $dataProvider;

@@ -1,17 +1,18 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use yii\helpers\Html;
+use yii\widgets\ListView;
 $this->title = 'Rotaract';
 ?>
 <div class="index-header">
     <div class="background"></div>
     <div class="header-content text-center">
         <h1>We are</h1>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorum, eveniet voluptatem vitae tenetur dolor nesciunt. Qui inventore autem libero, laboriosam tempore fugit, obcaecati dignissimos consequatur eligendi in aut, nihil.</h3>
-        <button class="btn btn-primary">Afla mai multe</button>
+        <div class="container"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorum, eveniet voluptatem vitae tenetur dolor nesciunt. Qui inventore autem libero, laboriosam tempore fugit, obcaecati dignissimos consequatur eligendi in aut, nihil.</h3></div>
+        <?= Html::a('Afla mai multe', ['/site/about'], ['class'=>'href btn btn-primary']) ?>
         <br>
-        <a href="#"><i class="fa fa-facebook"></i></a>
+        <?= Html::a('', ['/site/about'], ['class'=>'fa fa-facebook']) ?>
     </div> 
 </div>
 
@@ -41,20 +42,26 @@ $this->title = 'Rotaract';
 </div>
 
 <div class="index-projects text-center">
-    <div class="container">
+    <div class="container-fluid">
         <h1>Projects</h1>
-        <div class="col-md-4">
-            <img src="images/projects.jpeg" alt="">
-        </div>
-        <div class="col-md-4">
-            <img src="images/projects.jpeg" alt="">
-        </div>
-        <div class="col-md-4">
-            <img src="images/projects.jpeg" alt="">
-        </div>
+        <div class="container-fluid projects-layouts ">
+
+    <?php echo ListView::widget([
+        'dataProvider' => $limitProvider,
+        'summary' => false,
+        'itemView' => '_limit'
+
+    ]); ?>
+
+</div>
+
+
+
+
+
     </div>
 </div>
 
 <div class="index-signup text-center">
-    <button class="btn btn-primary ">Inscriere</button>
+    <?= Html::a('Inscriere', ['/users/users'], ['class'=>'btn btn-primary']) ?>
 </div>

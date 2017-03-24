@@ -12,6 +12,7 @@ use yii\filters\VerbFilter;
 
 class PeopleController extends Controller
 {
+   
 
     public function actionIndex()
     {
@@ -21,5 +22,18 @@ class PeopleController extends Controller
         return $this->render('index',['members'=>$members]);
     }
 
+    public function actionInfo($id)
+    {
+        $model = Members::findOne($id);
+        if ($model === null) {
+            throw new NotFoundHttpException;
+        }
+
+        return $this->render('info', [
+            'model' => $model,
+        ]);
+
+    }
+            
 
 }

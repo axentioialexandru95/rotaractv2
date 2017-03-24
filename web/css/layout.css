@@ -102,7 +102,7 @@ html, body {
 .index-projects {
   margin-top: 60px;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 500px; }
+  padding-bottom: 60px; }
   .index-projects h1 {
     margin-top: 50px;
     color: white;
@@ -307,24 +307,42 @@ html, body {
       height: 300px;
       width: 500px;
       box-shadow: 0px 3px 10px black; }
+    .projects-layouts .image a {
+      text-decoration: none; }
     .projects-layouts .image h3 {
       position: absolute;
-      left: 0;
-      top: 170px;
+      color: black;
+      left: 0px;
+      background-color: rgba(217, 27, 92, 0.2);
+      top: 20px;
       right: 0;
       bottom: 0;
       color: white;
       margin: auto;
-      background-color: rgba(217, 27, 92, 0.5);
-      padding-top: 10px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
+      padding-top: 130px;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 20px;
       font-size: 3rem;
       font-family: "Roboto Slab";
       transition: 0.3s all ease-in-out; }
       .projects-layouts .image h3:hover {
+        background-color: rgba(217, 27, 92, 0.7);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
         top: 10px; }
+
+.list-view {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .members-header {
   position: absolute;
@@ -371,7 +389,6 @@ html, body {
       left: 30px;
       color: white;
       background-color: rgba(0, 0, 0, 0.7);
-      text-transform: uppercase;
       padding: 10px 20px;
       font-size: 2.5rem;
       cursor: pointer; }
@@ -404,10 +421,12 @@ html, body {
     margin-top: 150px; }
 
 .help-methods {
-  margin-top: 400px; }
+  margin-top: 400px;
+  margin-left: 50px;
+  margin-right: 50px; }
   .help-methods hr {
     margin: 20px 30%;
-    border-top: 2px solid #d91b5c; }
+    border-top: 1px solid #d91b5c; }
   .help-methods h3 {
     font-size: 2.5rem; }
   .help-methods p {
@@ -426,14 +445,20 @@ html, body {
       transform: translateY(-2px);
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
   .help-methods .col-md-4 {
-    border-right: 1px solid #d91b5c;
     transition: 0.3s all ease-in-out; }
     .help-methods .col-md-4:hover {
       background-color: rgba(217, 27, 92, 0.1); }
-  .help-methods .container .last {
-    border-right: none; }
   .help-methods .fa-percent {
     margin-top: 70px; }
+
+.other-methods {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .other-methods p {
+    font-size: 1.7rem; }
+  .other-methods hr {
+    margin: 10px 30%;
+    border-top: 1px solid #d91b5c; }
 
 .bg {
   height: 100vh; }
@@ -467,7 +492,6 @@ html, body {
   height: 100vh; }
   .bg-projects .background-projects {
     position: absolute;
-    height: 200px;
     top: 0;
     left: 0;
     right: 0;
@@ -560,3 +584,111 @@ a {
     border: 0;
     border-radius: 0;
     font-size: 3rem; }
+
+.grid-view {
+  border: 1px solid gray;
+  background: white; }
+  .grid-view a {
+    color: black; }
+  .grid-view .glyphicon {
+    transition: 0.3s all ease-in-out;
+    color: black; }
+    .grid-view .glyphicon:hover {
+      color: #d91b5c; }
+
+.members-index {
+  margin: 30px 30px; }
+  .members-index .btn-success {
+    transition: 0.3s all ease-in-out;
+    border: 0;
+    border-radius: 0;
+    background-color: #d91b5c;
+    font-size: 3rem;
+    padding: 10px 20px;
+    margin-bottom: 20px; }
+    .members-index .btn-success:hover {
+      -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+      transform: translateY(-3px); }
+
+.members-create {
+  margin-top: 30px; }
+
+.post-header {
+  position: relative;
+  height: 300px;
+  background-image: url("../images/header.PNG");
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.post-body {
+  position: relative;
+  margin-top: -150px;
+  background-color: white;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); }
+  .post-body img {
+    height: 400px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px; }
+  .post-body h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase; }
+  .post-body hr {
+    margin: 30px 45%;
+    border-top: 2px solid rgba(217, 27, 92, 0.3); }
+  .post-body .fa-circle {
+    color: rgba(0, 128, 0, 0.5);
+    margin-left: 30px;
+    margin-bottom: 20px; }
+
+.post-text {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 100px;
+  margin-left: 10%;
+  margin-right: 10%; }
+
+.member-image {
+  background-color: white;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  padding-top: 50px;
+  position: relative;
+  z-index: 2;
+  margin-top: 200px;
+  margin-bottom: 100px; }
+  .member-image img {
+    height: 300px;
+    width: 400px; }
+  .member-image hr {
+    margin: 20px 30%;
+    border-top: 1px solid rgba(217, 27, 92, 0.4); }
+  .member-image .text-box {
+    margin-left: 20%;
+    text-align: left !important;
+    margin-top: 50px;
+    padding-bottom: 100px; }
+  .member-image .position {
+    background-color: rgba(217, 27, 92, 0.8);
+    color: white;
+    font-size: 18px;
+    margin: 15px 45%;
+    padding: 10px 20px; }
+
+.users {
+  margin-top: 50px; }
+
+.submit-register {
+  transition: 0.3s all ease-in-out;
+  background-color: rgba(217, 27, 92, 0.8);
+  border: none;
+  border-radius: 0;
+  padding: 10px 50px;
+  font-size: 1.9rem;
+  margin-top: 10px;
+  margin-right: 20px; }
+  .submit-register:hover {
+    background-color: #d91b5c;
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px); }

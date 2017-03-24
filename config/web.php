@@ -9,7 +9,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '2u13io12u3io12',
+            'cookieValidationKey' => '9fcXyfEaD6Yiewa8NGbdvtdUxbcfs7SagxJd3',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -21,7 +21,6 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             // send all mails to a file by default. You have to set
@@ -31,11 +30,11 @@ $config = [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
-                'username' => 'gabrieldornianu@gmail.com',
-                'password' => '',
-                'port' => '587',
-                'encryption' => 'tls',
-            ]
+                'username' => 'axentioialexandru95@gmail.com',
+                'password' => 'lifewarrior95',
+                'port' => '465',
+                'encryption' => 'ssl',
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

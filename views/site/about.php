@@ -25,5 +25,5 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
 <div class="about-members text-center">
-    <button class="btn btn-primary">Membri</button>
+    <?= Html::a('Membri', ['/people/index'], ['class'=>'btn btn-primary']) ?>
 </div>

@@ -1,10 +1,11 @@
 <?php
 
 use yii\helpers\Html;
-
+use yii\widgets\ListView;
 
 $this->title = 'Proiecte';
 
+/* @var $dataProvider yii\data\ArrayDataProvider */
 
 ?>
 
@@ -24,18 +25,13 @@ $this->title = 'Proiecte';
     </div>
 </div>
 
-<div class="container-fluid projects-layouts">
+<div class="container-fluid projects-layouts ">
 
-
-
-    <?php foreach ($projects as $project): ?>
-
-
-        <div class="image">
-        <img src="<?= $project->image ?>">
-        <h3 class="overlay text-center"><?= $project->name?> </h3>
-        </div>
-    <?php endforeach; ?>
+    <?php echo ListView::widget([
+        'dataProvider' => $dataProvider,
+        'summary' => false,
+        'itemView' => '_projects',
+    ]); ?>
 
 </div>
 
@@ -46,13 +42,12 @@ $this->title = 'Proiecte';
     </div>
 </div>
 
-<div class="container-fluid projects-layouts">
+<div class="container-fluid projects-layouts ">
 
-    <?php foreach ($projects as $project): ?>
-        <div class="image">
-        <img src="<?= $project->image ?>">
-        <h3 class="overlay text-center"><?= $project->name?> </h3>
-        </div>
-    <?php endforeach; ?>
+    <?php echo ListView::widget([
+        'dataProvider' => $seconddataProvider,
+        'summary' => false,
+        'itemView' => '_projects'
+    ]); ?>
 
 </div>
