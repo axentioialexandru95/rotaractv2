@@ -1,6 +1,14 @@
 html, body {
   overflow-x: hidden; }
 
+.navbar-collapse {
+  background-color: #d91b5c;
+  border: none;
+  text-align: center; }
+  @media screen and (min-width: 767px) {
+    .navbar-collapse {
+      background-color: transparent; } }
+
 .container-fluid {
   margin: 0;
   padding: 0; }
@@ -33,6 +41,23 @@ html, body {
 .big {
   transition: 0.3s all ease-in-out;
   background-color: #d91b5c; }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar li a {
+    font-size: 13px; }
+  .navbar-brand img {
+    margin-left: -50px; } }
+
+@media screen and (max-width: 767px) {
+  button.navbar-toggle {
+    margin-top: 25px;
+    right: 15px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 10px 15px;
+    border: none;
+    background-color: #d91b5c; } }
 
 .index-header {
   height: 350px; }
@@ -77,6 +102,9 @@ html, body {
       font-size: 5rem; }
       .index-header .header-content .fa-facebook:hover {
         color: #d91b5c; }
+    @media screen and (max-width: 900px) {
+      .index-header .header-content {
+        margin: 120px 0px; } }
 
 .index-learning h1 {
   color: black;
@@ -163,8 +191,9 @@ html, body {
 .footer-details {
   padding-top: 50px;
   color: white;
-  height: 300px;
   background-color: rgba(0, 0, 0, 0.8); }
+  .footer-details hr {
+    margin: 10px 30%; }
   .footer-details img {
     height: 100px;
     width: 300px; }
@@ -255,6 +284,13 @@ html, body {
   margin-top: 50px;
   width: 100vw; }
 
+@media screen and (max-width: 991px) {
+  .contact-info {
+    margin-top: 350px;
+    height: 350px; }
+  .contact-form {
+    margin-bottom: 370px; } }
+
 .blog-header {
   height: 400px;
   position: absolute;
@@ -307,6 +343,10 @@ html, body {
       height: 300px;
       width: 500px;
       box-shadow: 0px 3px 10px black; }
+      @media screen and (max-width: 640px) {
+        .projects-layouts .image img {
+          width: 400px;
+          height: 250px; } }
     .projects-layouts .image a {
       text-decoration: none; }
     .projects-layouts .image h3 {

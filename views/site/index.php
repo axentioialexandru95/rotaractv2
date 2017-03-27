@@ -9,7 +9,7 @@ $this->title = 'Rotaract';
     <div class="background"></div>
     <div class="header-content text-center">
         <h1>We are</h1>
-        <div class="container"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorum, eveniet voluptatem vitae tenetur dolor nesciunt. Qui inventore autem libero, laboriosam tempore fugit, obcaecati dignissimos consequatur eligendi in aut, nihil.</h3></div>
+        <div class="text-center"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorum, eveniet voluptatem vitae tenetur dolor nesciunt. Qui inventore autem libero, laboriosam tempore fugit, obcaecati dignissimos consequatur eligendi in aut, nihil.</h3></div>
         <?= Html::a('Afla mai multe', ['/site/about'], ['class'=>'href btn btn-primary']) ?>
         <br>
         <?= Html::a('', ['/site/about'], ['class'=>'fa fa-facebook']) ?>

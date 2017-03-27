@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 
-<div class="contact-header">
+<div class="contact-header container-fluid">
         <div class="background"></div>
         <div class="container">
             <div class="header-text text-center">
@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?php else: ?>
 
-            <div class="row">
+            <div class="row container">
                 <div class="col-md-6">
 
                     <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
@@ -78,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?php endif; ?>
 
-<div class="map">
+<div class="map container-fluid">
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1130.0001313154107!2d26.24695616818386!3d47.65317631827691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4734fc2741ff5d8d%3A0xd05e0a2934b58a!2sGenesis+Management+Consulting+SRL!5e0!3m2!1sro!2sro!4v1488888635391" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
 
