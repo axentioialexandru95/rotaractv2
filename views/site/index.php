@@ -12,8 +12,7 @@ $this->title = 'Rotaract';
         <div class="text-center"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorum, eveniet voluptatem vitae tenetur dolor nesciunt. Qui inventore autem libero, laboriosam tempore fugit, obcaecati dignissimos consequatur eligendi in aut, nihil.</h3></div>
         <?= Html::a('Afla mai multe', ['/site/about'], ['class'=>'href btn btn-primary']) ?>
         <br>
-        <?= Html::a('', ['/site/about'], ['class'=>'fa fa-facebook']) ?>
-    </div> 
+    </div>
 </div>
 
 <div class="index-learning text-center">
@@ -30,7 +29,7 @@ $this->title = 'Rotaract';
             <h3>Leadership</h3>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, vel ipsam veritatis officia, perspiciatis fugiat minima, molestiae quas suscipit ipsum similique reprehenderit sit. Nam ipsa nobis cum, earum rem atque?</p>
-    
+
         </div>
         <div class="col-md-4">
             <i class="fa fa-black-tie"></i>

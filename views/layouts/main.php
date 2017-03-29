@@ -30,10 +30,11 @@ AppAsset::register($this);
     <?php
     
     NavBar::begin([
-        'brandLabel' => Html::img('images/logo.png'),
+        'brandLabel' => Html::img('images/logo2.png'),
         'brandUrl' => Yii::$app->homeUrl,
+        'innerContainerOptions' => ['class' => 'container-fluid'],
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fluid navbar-fixed-top',
         ],
     ]);
 
@@ -83,7 +84,7 @@ AppAsset::register($this);
         <div class="col-md-4">
             <h3>Social</h3>
             <hr>
-            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.facebook.com/rotaractsuceava/" target="_blank"><i class="fa fa-facebook"></i></a>
         </div>
     </div>
 <a href="#" class="go-top"> <i class="fa fa-arrow-up"></i></a>
