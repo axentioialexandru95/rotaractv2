@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -35,6 +36,7 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
@@ -45,9 +47,15 @@ AppAsset::register($this);
             ['label' => 'Inscriere', 'url' => ['/users/users']],
             ['label' => 'Vrei sa ajuti?', 'url' => ['/site/help']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
-
+            Yii::$app->user->isGuest ?
+                ['label' => '', 'url' => ['/site/login'],'options'=>['class'=>'login-muted']] :
+                ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    'url' => ['/site/logout'],
+                    'linkOptions' => ['data-method' => 'post']],
         ],
+
     ]);
+
     NavBar::end();
     ?>
 

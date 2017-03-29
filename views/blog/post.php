@@ -29,8 +29,10 @@ $this->title = 'Post';
         </div>
     </div>
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <p class="post-text"><?= $model['body']?></p>
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <p class="post-text"><?= $model['body']?></p>
+            </div>
         </div>
     </div>
 </div>

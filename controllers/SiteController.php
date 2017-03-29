@@ -57,6 +57,8 @@ class SiteController extends Controller
         ];
     }
 
+
+
     /**
      * Displays homepage.
      *Contact
@@ -148,6 +150,7 @@ class SiteController extends Controller
      *
      * @return string
      */
+
     public function actionAbout()
     {
         return $this->render('about');

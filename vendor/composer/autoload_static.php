@@ -29,6 +29,17 @@ class ComposerStaticInite57c31f60820f24ea6e224b82068f2ff
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'j' => 
+        array (
+            'johnitvn\\workbench\\' => 19,
+            'johnitvn\\jsonquery\\' => 19,
+            'johnitvn\\composerruntime\\' => 25,
+            'johnitvn\\cliruntime\\' => 20,
+        ),
+        'd' => 
+        array (
+            'dosamigos\\datepicker\\' => 21,
+        ),
         'c' => 
         array (
             'cebe\\markdown\\' => 14,
@@ -48,6 +59,7 @@ class ComposerStaticInite57c31f60820f24ea6e224b82068f2ff
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\BrowserKit\\' => 29,
+            'Stecman\\Component\\Symfony\\Console\\BashCompletion\\' => 49,
         ),
         'P' => 
         array (
@@ -109,6 +121,26 @@ class ComposerStaticInite57c31f60820f24ea6e224b82068f2ff
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
+        'johnitvn\\workbench\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johnitvn/yii2-workbench/src',
+        ),
+        'johnitvn\\jsonquery\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johnitvn/json-query/src',
+        ),
+        'johnitvn\\composerruntime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johnitvn/composer-runtime/src',
+        ),
+        'johnitvn\\cliruntime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johnitvn/cli-runtime/src',
+        ),
+        'dosamigos\\datepicker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/2amigos/yii2-date-picker-widget',
+        ),
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
@@ -152,6 +184,10 @@ class ComposerStaticInite57c31f60820f24ea6e224b82068f2ff
         'Symfony\\Component\\BrowserKit\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/browser-kit',
+        ),
+        'Stecman\\Component\\Symfony\\Console\\BashCompletion\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stecman/symfony-console-completion/src',
         ),
         'Psr\\Log\\' => 
         array (

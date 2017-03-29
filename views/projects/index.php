@@ -22,10 +22,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 <p>
                     <?= Html::a('Add Project', ['create'], ['class' => 'btn btn-success']) ?>
                 </p>
-           <div class="projects-admin-body">
+           <div class="table-responsive projects-admin-body">
                <?php Pjax::begin(); ?>    <?= GridView::widget([
                     'dataProvider' => $dataProvider,
                     'filterModel' => $searchModel,
+
                     'columns' => [
 
                         'id',

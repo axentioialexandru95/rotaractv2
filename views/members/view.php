@@ -14,10 +14,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="create-header text-center">
         <h1><?= Html::encode($this->title) ?></h1>
 </div>
-<div class="members-view">
+<div class="members-view container ">
+    <br>
 
-
-    <p>
+    <p class="text-center">
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-
+    <br>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [

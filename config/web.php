@@ -21,6 +21,7 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             // send all mails to a file by default. You have to set
@@ -36,6 +37,17 @@ $config = [
                 'encryption' => 'ssl',
             ],
         ],
+        'workbench'=>[
+            'class' => 'johnitvn\workbench\Workbench',
+            'workingDir' => dirname(__DIR__).'/workbench',
+            'author' => "Author Name",
+            'email' => "author@example.com",
+            'onlyIncludePackages' => [
+                'johnitvn/yii2-ajaxcrud',
+            ]
+        ],
+
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -45,15 +57,10 @@ $config = [
                 ],
             ],
         ],
+
         'db' => require(__DIR__ . '/db.php'),
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
+
+
     ],
     'params' => $params,
 ];

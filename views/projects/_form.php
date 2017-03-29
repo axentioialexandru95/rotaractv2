@@ -14,7 +14,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'date')->textInput()->hint('YYYY-LL-ZZ') ?>
+    <?= $form->field($model,'date')->hint('YY/MM/DD')->textInput(['maxlength' => true]) ?>
+
+
 
     <?= $form->field($model, 'file')->fileInput(); ?>
 

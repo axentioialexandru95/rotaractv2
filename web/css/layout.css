@@ -83,6 +83,9 @@ html, body {
     .index-header .header-content h3 {
       font-family: "Roboto Slab";
       font-size: 1.7rem; }
+      @media screen and (max-width: 640px) {
+        .index-header .header-content h3 {
+          margin: 0 5%; } }
     .index-header .header-content .btn-primary {
       transition: 0.3s all ease-in-out;
       background-color: rgba(217, 27, 92, 0.7);
@@ -192,11 +195,18 @@ html, body {
   padding-top: 50px;
   color: white;
   background-color: rgba(0, 0, 0, 0.8); }
+  @media screen and (max-width: 700px) {
+    .footer-details {
+      padding-bottom: 50px; } }
   .footer-details hr {
     margin: 10px 30%; }
   .footer-details img {
     height: 100px;
     width: 300px; }
+    @media screen and (max-width: 800px) {
+      .footer-details img {
+        width: 200px;
+        height: 75px; } }
   .footer-details a {
     color: white; }
     .footer-details a:hover {
@@ -227,10 +237,17 @@ html, body {
 .about-text {
   height: 330px;
   margin: 0px 100px; }
+  @media screen and (max-width: 700px) {
+    .about-text {
+      margin: 0px 20px;
+      height: 250px; } }
   .about-text h1 {
     color: black;
     font-family: "Roboto Slab";
     margin-top: 170px; }
+    @media screen and (max-width: 600px) {
+      .about-text h1 {
+        margin-top: 30px; } }
 
 .about-members {
   height: 200px;
@@ -345,8 +362,12 @@ html, body {
       box-shadow: 0px 3px 10px black; }
       @media screen and (max-width: 640px) {
         .projects-layouts .image img {
-          width: 400px;
+          width: 300px;
           height: 250px; } }
+      @media screen and (max-width: 500px) {
+        .projects-layouts .image img {
+          width: 250px;
+          height: 200px; } }
     .projects-layouts .image a {
       text-decoration: none; }
     .projects-layouts .image h3 {
@@ -372,6 +393,10 @@ html, body {
         margin-right: 10px;
         margin-bottom: 10px;
         top: 10px; }
+      @media screen and (max-width: 700px) {
+        .projects-layouts .image h3 {
+          padding-bottom: 50px;
+          padding-top: 80px; } }
 
 .list-view {
   display: -webkit-flex;
@@ -393,8 +418,12 @@ html, body {
   height: 300px;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-image: url(../images/header.PNG); }
+  @media screen and (max-width: 1750px) {
+    .members-header {
+      background-size: auto;
+      background-position: center; } }
   .members-header h1 {
     margin-top: 130px;
     color: white; }
@@ -414,13 +443,17 @@ html, body {
     transition: 0.3s all ease-in-out;
     margin: 30px;
     height: 300px;
-    width: 400px;
+    width: 300px;
     box-shadow: 0px 5px 10px black;
     cursor: pointer; }
     .members img:hover {
       -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
       transform: translateY(-2px); }
+    @media screen and (max-width: 700px) {
+      .members img {
+        height: 250px;
+        width: 250px; } }
   .members .image {
     position: relative; }
     .members .image h3 {
@@ -434,6 +467,9 @@ html, body {
       cursor: pointer; }
       .members .image h3:hover {
         background-color: black; }
+      @media screen and (max-width: 700px) {
+        .members .image h3 {
+          top: 170px; } }
     .members .image h4 {
       position: absolute;
       top: 250px;
@@ -444,6 +480,9 @@ html, body {
       padding: 10px 20px;
       font-size: 1.7rem;
       cursor: pointer; }
+      @media screen and (max-width: 700px) {
+        .members .image h4 {
+          top: 220px; } }
 
 .help-header {
   position: absolute;
@@ -464,9 +503,17 @@ html, body {
   margin-top: 400px;
   margin-left: 50px;
   margin-right: 50px; }
+  @media screen and (max-width: 700px) {
+    .help-methods {
+      margin-top: 320px;
+      margin-left: 10px;
+      margin-right: 10px; } }
   .help-methods hr {
     margin: 20px 30%;
     border-top: 1px solid #d91b5c; }
+    @media screen and (max-width: 700px) {
+      .help-methods hr {
+        margin: 20px 0%; } }
   .help-methods h3 {
     font-size: 2.5rem; }
   .help-methods p {
@@ -488,6 +535,9 @@ html, body {
     transition: 0.3s all ease-in-out; }
     .help-methods .col-md-4:hover {
       background-color: rgba(217, 27, 92, 0.1); }
+    @media screen and (max-width: 700px) {
+      .help-methods .col-md-4 {
+        margin-bottom: 50px; } }
   .help-methods .fa-percent {
     margin-top: 70px; }
 
@@ -519,17 +569,27 @@ html, body {
         font-size: 4rem;
         font-family: "Roboto Slab";
         color: white; }
+      @media screen and (max-width: 370px) {
+        .bg .background-login .site-login {
+          margin-top: 100px; } }
+      @media screen and (min-width: 370px) and (max-width: 400px) {
+        .bg .background-login .site-login {
+          margin-top: 140px; } }
       .bg .background-login .site-login .btn-primary {
         background-color: rgba(217, 27, 92, 0.8);
         border: 0;
         border-radius: 0;
         font-size: 2.5rem;
-        padding: 10px 100px;
-        margin-left: 180px; }
+        padding: 10px 100px; }
 
 .bg-projects {
   position: relative;
   height: 100vh; }
+  @media screen and (max-width: 700px) {
+    .bg-projects {
+      height: 140vh; }
+      .bg-projects .grid-view {
+        width: 500px; } }
   .bg-projects .background-projects {
     position: absolute;
     top: 0;
@@ -542,13 +602,16 @@ html, body {
     background-position: bottom; }
     .bg-projects .background-projects h1 {
       margin: auto;
-      margin-left: 47vw;
+      text-align: center;
       margin-top: 100px;
       color: white; }
     .bg-projects .background-projects .projects-index {
       margin-top: 130px;
       margin-left: 10%;
       margin-right: 10%; }
+      @media screen and (max-width: 700px) {
+        .bg-projects .background-projects .projects-index {
+          margin-top: 50px; } }
       .bg-projects .background-projects .projects-index .btn-success {
         transition: 0.3s all ease-in-out;
         font-size: 2.3rem;
@@ -561,6 +624,10 @@ html, body {
           -webkit-transform: translateY(-2px);
           -ms-transform: translateY(-2px);
           transform: translateY(-2px); }
+  .bg-projects td {
+    background-color: white; }
+  .bg-projects .projects-admin-body {
+    background-color: white; }
 
 .create-header {
   margin-top: -20px;
@@ -671,6 +738,10 @@ a {
     height: 400px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 50px; }
+    @media screen and (max-width: 700px) {
+      .post-body img {
+        height: 200px;
+        width: 250px; } }
   .post-body h3 {
     margin-bottom: 10px;
     text-transform: uppercase; }
@@ -687,7 +758,8 @@ a {
   font-size: 2rem;
   margin-bottom: 100px;
   margin-left: 10%;
-  margin-right: 10%; }
+  margin-right: 10%;
+  word-wrap: break-word; }
 
 .member-image {
   background-color: white;
@@ -699,12 +771,21 @@ a {
   margin-bottom: 100px; }
   .member-image img {
     height: 300px;
-    width: 400px; }
+    width: 300px; }
+    @media screen and (max-width: 640px) {
+      .member-image img {
+        height: 300px;
+        width: 300px; } }
+    @media screen and (max-width: 500px) {
+      .member-image img {
+        height: 200px;
+        width: 200px; } }
   .member-image hr {
     margin: 20px 30%;
     border-top: 1px solid rgba(217, 27, 92, 0.4); }
   .member-image .text-box {
     margin-left: 20%;
+    margin-right: 20%;
     text-align: left !important;
     margin-top: 50px;
     padding-bottom: 100px; }
@@ -712,8 +793,14 @@ a {
     background-color: rgba(217, 27, 92, 0.8);
     color: white;
     font-size: 18px;
-    margin: 15px 45%;
+    margin: 15px 40%;
     padding: 10px 20px; }
+    @media screen and (max-width: 680px) {
+      .member-image .position {
+        margin: 15px 100px; } }
+    @media screen and (max-width: 500px) {
+      .member-image .position {
+        margin: 15px 50px; } }
 
 .users {
   margin-top: 50px; }
@@ -732,3 +819,6 @@ a {
     -webkit-transform: translateY(-3px);
     -ms-transform: translateY(-3px);
     transform: translateY(-3px); }
+
+.login-muted {
+  z-index: -2323232; }

@@ -17,7 +17,6 @@ $this->title = 'Proiecte';
 
 
 
-
 <div class="projects">
     <div class="projects-text text-center">
         <h1>Proiecte Curente</h1>

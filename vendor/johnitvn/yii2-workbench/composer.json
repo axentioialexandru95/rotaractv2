@@ -1,0 +1,26 @@
+{
+    "name": "johnitvn/yii2-workbench",
+    "description": "Yii2 workbench support for yii2 extension development",
+    "type": "yii2-extension",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "John Martin",
+            "email": "john.itvn@gmail.com",
+            "homepage": "https://github.com/johnitvn?tab=repositories"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.4",
+        "johnitvn/composer-runtime": "1.0.0",
+        "johnitvn/json-query": "1.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "johnitvn\\workbench\\": "src/"
+        }
+    },
+    "extra": {
+        "bootstrap": "johnitvn\\workbench\\Bootstrap"
+    }
+}

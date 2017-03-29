@@ -13,7 +13,7 @@ $this->title = 'Login';
 <div class="bg">
     <div class="background-login">
         <div class="site-login well container text-center">
-            <h1><?= Html::encode($this->title) ?></h1>
+            <h1"><?= Html::encode($this->title) ?></h1>
 
             <p>Please fill out the following fields to login:</p>
 
@@ -35,7 +35,7 @@ $this->title = 'Login';
                 ]) ?>
 
                 <div class="form-group">
-                    <div class="col-lg-offset-0 col-lg-11">
+                    <div class="text-center col-lg-offset-0 col-lg-11">
                         <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                     </div>
                 </div>
