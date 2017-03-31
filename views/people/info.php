@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 
 
+$this->title = $model['name'];
+
 ?>
 
 <div class="container-fluid members-header text-center">

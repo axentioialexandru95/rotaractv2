@@ -24,15 +24,10 @@ $this->params['breadcrumbs'][] = $this->title;
     
 <div class="container">
     <div class="contact-info text-center">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <i class="fa fa-phone"> 0751 333 999</i>
             <br>
             <i class="fa fa-envelope"> contact@rotaract.com </i>
-        </div>
-        <div class="col-md-6">
-            <i class="fa fa-user"> Radu Bores</i>
-            <br>
-            <i class="fa fa-black-tie"> Manager </i>
         </div>
     </div>
 </div>

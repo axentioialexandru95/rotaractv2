@@ -127,15 +127,15 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             // Yii::$app->session->setFlash('contactFormSubmitted');
             
-            Yii::$app->mailer->compose('contact')
+            Yii::$app->mailer->compose()
             ->setFrom($model->email)
             ->setTo('axentioialexandru95@gmail.com')
-            ->setSubject($model->subject)
+            ->setSubject('Rotaract website message from'.' '.$model->name)
             ->setTextBody(
-                'You have a new mail from: '.$model->name . 'hey',
-                'Subject: '.$model->subject,
-                'Body: ' .$model->body,
-                'hey'
+                "You have a new mail from: ".$model->name.
+                "\nE-mail: ".$model->email.
+                "\nNr. Telefon: ".$model->subject.
+                "\nBody: " .$model->body
             )
             ->send();
             return $this->refresh();
@@ -169,13 +169,10 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
                 if($model->save()){
-                 return array(Yii::$app
+                 return Yii::$app
                  ->runAction('site/pdf',[
                      'model' => $model,
-                    ])
-                 ->runAction('site/mail',[
-                     'model' => $model,
-                    ]));
+                    ]);
                 }
             }
         }
@@ -220,7 +217,8 @@ class SiteController extends Controller
         // Text Second Page
         $mpdf->AddPage();
         $mpdf->WriteText(36,220, ''.$date.'');
-        $mpdf->Output();
+        $mpdf->Output( 'contract.pdf');
+
 
         return $this->actionMail($model);
 
@@ -242,28 +240,30 @@ class SiteController extends Controller
 
         $contractmail[0] = Yii::$app->mailer->compose()
             ->setFrom("rotaract@contact.com")
-            ->setTo("gabrieldornianu@yahoo.com")
-            ->setSubject("Inscriere Rotaract ")
+            ->setTo("axentioialexandru95@gmail.com")
+            ->setSubject("Contractul de sponsorizare Rotaract")
+            ->attach('contract.pdf')
             ->setTextBody(
-                "Nume: "
-                ."\nPrenume: "
-                ."\nTelefon: "
-                ."\nEmail: "
-                ."\nDespre mine: "
-                ."\nMotivul pentru care ma inscriu: "
-                ."\nPozitia in cadrul proiectului: "
+                "Companie: ".$model['company_name']
+                ."\nTelefon: ".$model['company_address']
+                ."\nEmail: ".$model['company_email']
+                ."\nReprezentant: ".$model['company_representative']
+                ."\nFunctia: ". $model['representative_function']
+                ."\nPlata: ". $model['payment']
             );
+
 
 
         $contractmail[1] = Yii::$app->mailer->compose()
             ->setFrom("rotaract@contact.com")
             ->setTo("axentioialexandru95@gmail.com")
-            ->setSubject("Your registration to Rotaract")
-            ->setTextBody("Buna ".","
-                ."\nMultimit ca te-ai inscris in proiectul Rotaract. Te vom contacta in cel mai scurt timp");
+            ->setSubject("Contract de sponsorizare")
+            ->attach('contract.pdf')
+            ->setTextBody("Buna ziua ".","
+                ."\nAveti atasat contractul generat in PDF.");
 
         Yii::$app->mailer->sendMultiple($contractmail);
 
-
+        return $this->render('help');
     }
 }

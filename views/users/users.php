@@ -1,4 +1,5 @@
 <?php
+$this->title = 'Inscriere';
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -33,7 +34,7 @@ use yii\widgets\ActiveForm;
         </div>
     <br>
 
-    <div class="row">
+    <div class="row visible-md visible-lg visible-xl">
     <div class="col-md-6 register-image-left">
         <?= Html::img('images/left.png') ?>
     </div>
@@ -54,6 +55,28 @@ use yii\widgets\ActiveForm;
             <li>Odată ce se aprobă adeziunea, ai devenit membru și te înscriem în baza de date internațională și în cea națională. Plătești o taxă de adeziune și apoi lunar o cotizație modică, pentru administrarea clubului.</li>
         </ol>
     </div>
+    </div>
+    <div class="row visible-xs visible-sm">
+        <div class="col-md-6 know">
+            <hr>
+            <h4>Uite ce trebuie să știi:</h4>
+            <ol>
+                <li>Clubul este destinat tinerilor între 18 și 30 de ani. Dacă ai sub 18 ani, verifică activitatea cluburilor Interact. Dacă ai peste 30, atunci Rotary este pentru tine.</li>
+                <br>
+                <li><ul id="ul-left">Procesul începe cu o perioadă de probă în care trebuie să:
+                        <li>participi la minim 6 întâlniri și la 2 proiecte</li>
+                        <li>propui un proiect, pe care să îl implementezi. Noi te vom ajuta în atingerea obiectivelor</li>
+                    </ul>
+                </li>
+                <br>
+                <li>Dacă treci cu bine această etapă, membri existenți vor vota într-o ședință calitatea ta de membru</li>
+                <br>
+                <li>Odată ce se aprobă adeziunea, ai devenit membru și te înscriem în baza de date internațională și în cea națională. Plătești o taxă de adeziune și apoi lunar o cotizație modică, pentru administrarea clubului.</li>
+            </ol>
+        </div>
+        <div class="col-md-6 register-image-left">
+            <?= Html::img('images/left.png') ?>
+        </div>
     </div>
     <br>
     <h3 class="text-center">Gata să trecem la fapte?<br>  <br></h3>

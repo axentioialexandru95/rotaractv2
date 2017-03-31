@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ListView;
 
 
-$this->title = 'Post';
+$this->title = $model['name'];
 
 /* @var $postProvider yii\data\ArrayDataProvider */
 

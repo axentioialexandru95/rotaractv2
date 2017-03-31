@@ -7,5 +7,5 @@
 
 
 ?>
-<h2>Thank you for your message,  </h2>
-<h2>the subject is : </h2>
+<h2>Thank you for contacting us.  </h2>
+<h2>We will answer shortly.</h2>

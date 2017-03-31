@@ -19,6 +19,7 @@ use Yii;
  */
 class Contracts extends \yii\db\ActiveRecord
 {
+    public $file;
     /**
      * @inheritdoc
      */
@@ -35,6 +36,7 @@ class Contracts extends \yii\db\ActiveRecord
         return [
             [['company_name', 'company_address', 'company_nr', 'CUI', 'company_representative', 'representative_function', 'payment', 'company_email'], 'required'],
             [['company_nr', 'CUI', 'payment'], 'integer'],
+            [['file'], 'file'],
             [['company_name', 'company_address', 'company_representative', 'representative_function', 'company_email'], 'string', 'max' => 255],
         ];
     }

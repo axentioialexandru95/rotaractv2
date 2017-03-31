@@ -17,7 +17,6 @@ use yii\web\UploadedFile;
  * @property string $reason
  * @property string $image
  * @property string $cv
- * @property string $position
  */
 class Users extends \yii\db\ActiveRecord
 {
@@ -39,7 +38,7 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'surname', 'phone', 'email', 'description', 'reason', 'image_file', 'cv_file', 'position'], 'required'],
+            [['name', 'surname', 'phone', 'email', 'description', 'reason', 'image_file', 'cv_file'], 'required'],
             [['description', 'reason'], 'string'],
             [['cv_file'], 'file', 'skipOnEmpty' => false],
             [['image_file'], 'file', 'skipOnEmpty' => false, 'maxSize' => 100* 20 * 1024 * 2],
@@ -62,7 +61,6 @@ class Users extends \yii\db\ActiveRecord
             'reason' => 'De ce vrei sa ni te alaturi ?',
             'image' => 'Imagine cu tine',
             'cv' => 'Cv-ul tau',
-            'position' => 'Pozitie',
             'cv_file' => 'Cv-ul tau',
             'image_file' => 'O imagine cu tine'
         ];

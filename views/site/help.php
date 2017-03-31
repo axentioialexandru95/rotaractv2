@@ -4,12 +4,12 @@ use yii\helpers\Html;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
 
-$this->title = 'Membri';
+$this->title = 'Vrei sa ajuti?';
 
 
 ?>
 
-<?php 
+<?php
 
     Modal::begin([
         'header'=>'<h3>Form</h3>',

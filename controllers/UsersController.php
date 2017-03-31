@@ -22,10 +22,10 @@ class UsersController extends \yii\web\Controller
             if($model->validate()){
 
                 Yii::$app->session->setFlash('success', 'Thanks for submitting. We will respond in no time!');
-                $model->cv_file->saveAs('uploads/'.$model->cv_file->baseName.'.'.$model->cv_file->extension);
-                $model->image_file->saveAs('uploads/'.$model->image_file->baseName.'.'.$model->image_file->extension);
-                $model->cv = 'uploads/'.$model->cv_file->baseName.'.'.$model->cv_file->extension;
-                $model->image = 'uploads/'.$model->image_file->baseName.'.'.$model->image_file->extension;
+                $model->cv_file->saveAs('inscriere/'.$model->cv_file->baseName.'.'.$model->cv_file->extension);
+                $model->image_file->saveAs('inscriere/'.$model->image_file->baseName.'.'.$model->image_file->extension);
+                $model->cv = 'inscriere/'.$model->cv_file->baseName.'.'.$model->cv_file->extension;
+                $model->image = 'inscriere/'.$model->image_file->baseName.'.'.$model->image_file->extension;
 
                 $emails = [];
 
@@ -40,7 +40,6 @@ class UsersController extends \yii\web\Controller
                 ."\nEmail: ".$model->email
                 ."\nDespre mine: ".$model->description
                 ."\nMotivul pentru care ma inscriu: ".$model->reason
-                ."\nPozitia in cadrul proiectului: ".$model->position
                 )
                 ->attach($model->cv)
                 ->attach($model->image);
