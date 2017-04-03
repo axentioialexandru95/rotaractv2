@@ -8,8 +8,8 @@ $this->title = 'Rotaract';
 <div class="index-header">
     <div class="background"></div>
     <div class="header-content text-center">
-        <h1>We are</h1>
-        <div class="text-center"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorum, eveniet voluptatem vitae tenetur dolor nesciunt. Qui inventore autem libero, laboriosam tempore fugit, obcaecati dignissimos consequatur eligendi in aut, nihil.</h3></div>
+        <h2>Hai să facem diferența!</h2>
+        <div class="text-center container"><h3>Clubul Rotaract Suceava Bucovina face parte din familia internațională a cluburilor Rotary unde vecini, prieteni și liderii din fiecare domeniu își împart ideile și rezolvă probleme pentru a genera schimbare sustenabilă.</h3></div>
         <?= Html::a('Afla mai multe', ['/site/about'], ['class'=>'href btn btn-primary']) ?>
         <br>
     </div>
@@ -17,25 +17,27 @@ $this->title = 'Rotaract';
 
 <div class="index-learning text-center">
     <div class="container">
-        <h1>Ce poti invata de la noi</h1>
-        <div class="col-md-4">
-            <i class="fa fa-handshake-o"></i>
-            <h3>Comunicare</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, vel ipsam veritatis officia, perspiciatis fugiat minima, molestiae quas suscipit ipsum similique reprehenderit sit. Nam ipsa nobis cum, earum rem atque?</p>
-        </div>
+        <h1>Cu ce ne ocupăm și ce poți învăța de la noi?</h1>
         <div class="col-md-4">
             <i class="fa fa-users"></i>
             <h3>Leadership</h3>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, vel ipsam veritatis officia, perspiciatis fugiat minima, molestiae quas suscipit ipsum similique reprehenderit sit. Nam ipsa nobis cum, earum rem atque?</p>
+            <p>Suntem o platformă prin care membri și prietenii noști au acces la cele mai bune instrumente de dezvoltare personală și profesională. Acest lucru îl facem atât prin workshop-uri, seminare și conferințe, dar mai ales practic prin acțiuni și proiecte culturale, sociale sau umanitare.
+            </p>
 
         </div>
         <div class="col-md-4">
-            <i class="fa fa-black-tie"></i>
-            <h3>Self-esteem</h3>
+            <i class="fa fa-handshake-o"></i>
+            <h3>Proiecte</h3>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, vel ipsam veritatis officia, perspiciatis fugiat minima, molestiae quas suscipit ipsum similique reprehenderit sit. Nam ipsa nobis cum, earum rem atque?</p>
+            <p>Proiectele realizate în serviciul comunității locale și internaționale reprezintă coloana vertebrală a organizației. Noi promovăm pacea și buna înțelegere la nivel mondial dar și rezolvarea unor probleme neglijate ale societății: ameliorarea vieții persoanelor cu dizabilități, campanii de ecologizare, acte caritabile sau programe educaționale.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <i class="fa fa-sitemap"></i>
+            <h3>Networking</h3>
+            <hr>
+            <p>Nu suntem singuri și tot ce vrem să facem iese mai bine dacă lucrăm împreună. Ne facem prieteni peste tot în țară și în lume, călătorim mai frumos și mai ieftin, putem apela la o rețea de profesioniști pentru proiectele noastre și ne conectăm cu alții care împărtășesc aceleași valori.</p>
         </div>
     </div>
 </div>

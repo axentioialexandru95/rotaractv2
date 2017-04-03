@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+vendor/2amigos/
+vendor/codeception/base/tests/data/claypit/tests/_output/
+vendor/codeception/base/tests/data/included/_log/
+vendor/codeception/base/tests/data/included/jazz/pianist/tests/_log/
+vendor/codeception/base/tests/data/included/jazz/tests/_log/
+vendor/codeception/base/tests/data/included/shire/tests/_log/
+vendor/codeception/base/tests/data/included_mix/src/foo/AcmePack/tests/_log/
+vendor/codeception/base/tests/data/included_w/src/foo/AcmePack/tests/_log/
+web/uploads/Ana Maria.jpg
+web/uploads/Ana-Maria.jpg
+web/uploads/Bianca.jpg
+web/uploads/Delia.jpg
+web/uploads/Ionut.jpg
+web/uploads/Larisa-Delia.jpg
+web/uploads/Roxana.jpg

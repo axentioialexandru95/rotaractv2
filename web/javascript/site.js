@@ -1,4 +1,4 @@
-$(window).scroll(function() {    
+$(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 10) {
@@ -14,6 +14,25 @@ $(document).ready(function () {
         $('#modal').modal('show')
             .find('#modalContent')
             .load($(this).attr('value'));
+
     });
+
+
+
+    $('#goBack').click(function(){
+        parent.history.back();
+        return false;
+    });
+    if ($("#infoppl").length > 0)
+    {
+        $(document).on('click', function (e) {
+            if ($(e.target).closest("#infoppl").length === 0) {
+                $("#infoppl").hide();
+
+                window.location.href = "index.php?r=people%2Findex";
+            }
+
+        });
+    }
 
 });

@@ -255,9 +255,10 @@ html,body
 
 //Partners
 .partners
-    height: 200px
     display: flex
-    justify-content: space-around
+    flex-wrap: wrap
+    margin-bottom: 50px
+    justify-content: space-between
     h1
         color: black !important
         font-family: $primary-font
@@ -265,8 +266,8 @@ html,body
     .resized
         transition: 0.3s all ease-in-out
         margin-top: 20px
-        height: 100px
-        width: 100px
+        height: 150px
+        max-width: 300px
         filter: grayscale(100%)
         &:hover
             filter: grayscale(0%)
@@ -281,6 +282,7 @@ html,body
 
 .footer-details
     padding-top: 50px
+    padding-bottom: 20px
     color: white
     background-color: rgba(black,0.8)
     @media screen and (max-width: 700px)
@@ -321,31 +323,56 @@ html,body
         height: 300px
         width: 100%
         background:
-            image: url(../images/header.PNG)
+            image: url(../images/about.PNG)
             size: cover
-            position: bottom
+            position: 0px -500px
             attachment: fixed
     .header-text
         margin-top: 150px
 //About Text
 .about-text
-    height: 330px
     margin: 0px 100px
     @media screen and (max-width: 700px)
         margin: 0px 20px
-        height: 250px
+
     h1
         color: black
         font-family: $primary-font
-        margin-top: 170px
-        @media screen and (max-width: 600px)
-            margin-top: 30px
+    .text-positioning
+      margin: 70px 0px
+      .image-resized
+          margin-top: 40px
+          height: 350px
+    .download-button
+      border: none
+      padding: 10px 20px
+      border-radius: 0
+      background-color: $primary-color
+#blockquote
+  margin: 50px 0px
+  font-family: 'Julee', cursive
+  font-size: 50px
+
+  color: darkgray
+  padding: 50px
+  &:before
+    position: relative
+    right: 10px
+    color: $primary-color
+    content: "\201C"
+    font-size: 50px
+  &:after
+    color: $primary-color !important
+    position: relative
+    top: 40px
+    content: "\201D"
+    font-size: 50px
 
 // About Members Button
 .about-members
     height: 200px
     background:
-        image: url(../images/header.PNG)
+        image: url(../images/about.PNG)
         size: cover
         attachment: fixed
 
@@ -371,10 +398,10 @@ html,body
     bottom: 0
     height: 300px
     background:
-        image: url(../images/header.PNG)
+        image: url(../images/contact.PNG)
         size: cover
         attachment: fixed
-        position: bottom
+        position: 0px -800px
     .header-text
         h1
             color: white
@@ -524,8 +551,8 @@ html,body
     background:
         attachment: fixed
         size: cover
-        position: 0px 1100px
-        image: url(../images/header1.PNG)
+        position: 0px -600px
+        image: url(../images/header-members.jpeg)
 
     h1
         margin-top: 200px
@@ -548,6 +575,7 @@ html,body
         @media screen and (max-width: 700px)
             height: 250px
             width: 250px
+
 
     .image
         position: relative
@@ -901,6 +929,19 @@ a
     z-index: 2
     margin-top: 200px
     margin-bottom: 100px
+    #goBack
+      background: none
+      border: none
+      font-size: 30px
+      font-weight: 600
+      position: absolute
+      color: $primary-color
+      right: 20%
+      transition: 0.3s all ease-in-out
+      top: 20px
+      &:hover
+        transform: translateY(-2px)
+
     img
         height: 300px
         width: 300px

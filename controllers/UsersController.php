@@ -31,7 +31,7 @@ class UsersController extends \yii\web\Controller
 
                 $emails[] = Yii::$app->mailer->compose()
                 ->setFrom($model->email)
-                ->setTo("gabrieldornianu@yahoo.com")
+                ->setTo("axentioialexandru95@gmail.com")
                 ->setSubject("Inscriere Rotaract ".$model->name." ".$model->surname)
                 ->setTextBody(
                 "Nume: ".$model->name
@@ -49,7 +49,7 @@ class UsersController extends \yii\web\Controller
                 ->setTo($model->email)
                 ->setSubject("Your registration to Rotaract")
                 ->setTextBody("Buna ".$model->surname.","
-                ."\nMultimit ca te-ai inscris in proiectul Rotaract. Te vom contacta in cel mai scurt timp");
+                ."\nMultumim ca te-ai inscris in proiectul Rotaract. Te vom contacta in cel mai scurt timp");
 
                 Yii::$app->mailer->sendMultiple($emails);
 

@@ -125,7 +125,7 @@ class SiteController extends Controller
     {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            // Yii::$app->session->setFlash('contactFormSubmitted');
+            Yii::$app->session->setFlash('contactFormSubmitted');
             
             Yii::$app->mailer->compose()
             ->setFrom($model->email)
@@ -265,5 +265,11 @@ class SiteController extends Controller
         Yii::$app->mailer->sendMultiple($contractmail);
 
         return $this->render('help');
+    }
+    public function actionHandbook()
+    {
+        $path = Yii::getAlias('@webroot') . '/';
+        $file = $path . 'handbook.pdf';
+        Yii::$app->response->sendFile($file);
     }
 }

@@ -22,6 +22,7 @@ class AppAsset extends AssetBundle
         'css/layout.css',
         '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
         '//fonts.googleapis.com/css?family=Roboto+Slab',
+        '//fonts.googleapis.com/css?family=Julee',
 
     ];
     

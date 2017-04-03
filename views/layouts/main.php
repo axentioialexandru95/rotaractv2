@@ -6,8 +6,8 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+
 
 
 AppAsset::register($this);
@@ -17,6 +17,7 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
+    <link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl; ?>/favicon.png?=v2" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -65,9 +66,14 @@ AppAsset::register($this);
         <div class="container">
             <h1 class="text-center">Parteneri</h1>
             <div class="partners">
-                <img src="images/partner1.png" alt="partner-name" class="resized">
-                <img src="images/partner2.png" alt="partner-name" class="resized">
-                <img src="images/partner3.png" alt="partner-name" class="resized">
+                <?php
+                $dirname = "parteneri/";
+                $images = glob($dirname."*.png");
+
+                foreach($images as $image) {
+                    echo '<img src="'.$image.'" class="resized"/>';
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -79,7 +85,8 @@ AppAsset::register($this);
         <div class="col-md-4">
             <h3 class="text-center">Despre</h3>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, obcaecati, officia. Minima natus sapiente saepe velit debitis, qui, explicabo nobis temporibus numquam alias, nesciunt fugiat. Eius labore blanditiis quidem vel.</p>
+            <p class="text-justify">
+                Rotaract Suceava Bucovina este în primul rând un club de prietenie, o organizație destinată tinerilor din Suceava concentrată pe dezvoltarea calităților de lider și pe servicii aduse comunității locale. </p>
         </div>
         <div class="col-md-4">
             <h3>Social</h3>
