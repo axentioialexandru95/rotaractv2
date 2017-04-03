@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <br><br> Ne întâlnim în fiecare joi la o ședință unde ne cunoaștem mai bine și discutăm idei de proiecte, participăm la diverse evenimente și activități. Chiar dacă acționăm local, nu suntem singuri ci suntem afiliați la familia internațională Rotary. Fiecare club Rotaract din lume are un club Rotary sponsor. Al nostru este Rotary Suceava Bucovina. http://www.rotarysuceava.ro/ De asemenea, facem parte dintr-o organizație regională: Districtul 2241 care reunește toate cluburile din România și Republica Moldova. rotaract.ro
         </p>
         </div>
-        <div class="col-md-6 text-positioning">
+        <div class="col-md-6 text-positioning text-center">
             <?= Html::img('images/1.jpg', ['class' => 'image-resized']) ?>
         </div>
     </div>
@@ -43,8 +43,8 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
+    <div class=" about-text row">
+        <div class="col-md-6">
             <h1>Despre Rotary Internațional</h1>
             <p class="text-justify">
                 Rotary Internațional este o comunitate globală de profesioniști din toate domeniile care lucrează pentru a deservi comunitatea și pentru a promova pacea și rezolvarea unor probleme globale. Are mai mult de 1.2 milioane de membri în peste 35.000 cluburi care și-au propus să promoveze pacea în lume, să lupte împotriva sărăciei, a bolilor să promoveze educația și creșterea calității vieții celor defavorizați.
@@ -58,12 +58,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 <li>Va fi în beneficiul tuturor celor implicați?</li>
             </ul>
             <p>Dacă ideile pe care vreți să le implementați trec acest test cu răspunsuri afirmative, atunci Rotary este organizația potrivită pentru voi.</p>
-            <div class="text-center">
-                <h3 id="blockquote">Service Above Self</h3>
-            </div>
+
+        </div>
+        <div class="col-md-6 text-positioning text-center">
+            <?= Html::img('images/rotary.png', ['class' => 'image-resized responsive']) ?>
         </div>
     </div>
-
+    <div class="text-center">
+        <h3 id="blockquote">Service Above Self</h3>
+    </div>
 </div>
 <div class="about-members text-center">
     <?= Html::a('Membri', ['/people/index'], ['class'=>'btn btn-primary']) ?>

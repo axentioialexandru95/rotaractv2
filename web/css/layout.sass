@@ -153,10 +153,12 @@ html,body
         height: 500px
         width: 100%
         background:
-            image: url(../images/header.PNG)
+            image: url(../images/header.png)
             size: cover
             position: 0px -100px
             attachment: fixed
+        @media (max-width: 800px)
+            background-position: bottom
 
     .header-content
         margin: 150px 200px 0px 200px
@@ -164,11 +166,15 @@ html,body
         h1
             font-size: 4rem
             font-family: $primary-font
+        h2
+          font-size: 5rem
+          font-family: 'Dekko', cursive
         h3
             font-family: $primary-font
             font-size: 1.7rem
+            line-height: 25px
             @media screen and (max-width: 640px)
-                margin: 0 5%
+                  margin: 0 5%
         .btn-primary
             transition: 0.3s all ease-in-out
             background-color: rgba($primary-color, 0.7)
@@ -236,7 +242,7 @@ html,body
 .index-signup
     height: 300px
     background:
-        image: url(../images/header.PNG)
+        image: url(../images/header.png)
         size: cover
         position: top
         attachment: fixed
@@ -323,12 +329,27 @@ html,body
         height: 300px
         width: 100%
         background:
-            image: url(../images/about.PNG)
+            image: url(../images/about.png)
             size: cover
             position: 0px -500px
             attachment: fixed
+        @media (max-width: 1700px)
+          background-position: bottom
+        @media (max-width: 1400px)
+          background-position: 0px -100px
+        @media (max-width: 800px)
+          background-position: bottom
     .header-text
         margin-top: 150px
+        h1
+          font-size: 5rem
+          font-family: 'Dekko', cursive
+
+.header-text
+    margin-top: 150px
+    h1
+      font-size: 5rem
+      font-family: 'Dekko', cursive
 //About Text
 .about-text
     margin: 0px 100px
@@ -343,11 +364,23 @@ html,body
       .image-resized
           margin-top: 40px
           height: 350px
+          @media (max-width: 550px )
+              height: 250px !important
+              width: 300px
     .download-button
       border: none
       padding: 10px 20px
       border-radius: 0
       background-color: $primary-color
+
+    @media (max-width: 760px)
+      .responsive
+        height: 300px !important
+        width: 500px
+    @media (max-width: 578px)
+      .responsive
+        height: 150px !important
+        width: 250px
 #blockquote
   margin: 50px 0px
   font-family: 'Julee', cursive
@@ -372,7 +405,7 @@ html,body
 .about-members
     height: 200px
     background:
-        image: url(../images/about.PNG)
+        image: url(../images/about.png)
         size: cover
         attachment: fixed
 
@@ -398,10 +431,14 @@ html,body
     bottom: 0
     height: 300px
     background:
-        image: url(../images/contact.PNG)
+        image: url(../images/contact.png)
         size: cover
         attachment: fixed
         position: 0px -800px
+    @media (max-width: 1700px)
+      background-position: 0px -400px
+    @media (max-width: 800px)
+      background-position: bottom
     .header-text
         h1
             color: white
@@ -410,8 +447,8 @@ html,body
 
 .contact-form
     position: relative
-    height: 300px
-    margin-top: -100px
+
+
     .btn-primary
         background-color: $primary-color
         border-radius: 0
@@ -432,12 +469,18 @@ html,body
 @media screen and (max-width: 991px)
     .contact-info
         margin-top: 350px
-        height: 250px
+        height: 350px
     .contact-form
-        margin-bottom: 370px
-
+        margin-bottom: 470px
+@media screen and (max-width: 560px)
+  .contact-info
+    height: 450px
+@media screen and (max-width: 350px)
+  .contact-info
+    height: 600px
 // Blog Header
 .blog-header
+
     height: 400px
     position: absolute
     top: 0
@@ -451,10 +494,16 @@ html,body
         position: 0px -700px
     @media (max-width: 1910px )
         background-position: 0px -500px
+    @media (max-width: 1575px )
+      background-position: 0px -300px
+    @media (max-width: 800px )
+      background-position: bottom
 
     .blog-text
         height: 400px
         h1
+            font-family: 'Dekko', cursive
+            font-size: 5rem
             padding-top: 170px
             color: white
 
@@ -553,8 +602,13 @@ html,body
         size: cover
         position: 0px -600px
         image: url(../images/header-members.jpeg)
-
+    @media (max-width: 1900px)
+      background-position: 0px -300px
+    @media (max-width: 900px)
+      background-position: bottom
     h1
+        font-size: 5rem
+        font-family: 'Dekko', cursive
         margin-top: 200px
         color: white
 
@@ -618,9 +672,13 @@ html,body
         size: cover
         position: 0px -250px
         attachment: fixed
-        image: url(../images/helpbackground1.jpeg)
+        image: url(../images/help.jpeg)
+    @media (max-width: 800px)
+      background-position: bottom
 
     h1
+        font-size: 5rem
+        font-family: 'Dekko', cursive
         color: white
         margin-top: 150px
 
@@ -817,8 +875,14 @@ a
         attachment: fixed
         position: 0px -500px
         image: url(../images/header-users.png)
+    @media (max-width: 1250px)
+      background-position: 0px -200px
+    @media (max-width: 800px)
+      background-position: bottom
 
     h1
+        font-size: 5rem !important
+        font-family: 'Dekko', cursive
         padding-top: 150px
         color: white
 .well-parallax
@@ -932,13 +996,17 @@ a
     #goBack
       background: none
       border: none
-      font-size: 30px
-      font-weight: 600
+      font-size: 40px
+      font-weight: 300
       position: absolute
       color: $primary-color
-      right: 20%
+      right: 30px
+      @media (max-width: 800px)
+        top: 10px
+        font-size: 30px
+        right: 10px
       transition: 0.3s all ease-in-out
-      top: 20px
+      top: 15px
       &:hover
         transform: translateY(-2px)
 

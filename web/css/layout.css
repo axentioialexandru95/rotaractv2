@@ -146,19 +146,26 @@ html, body {
     bottom: 0;
     height: 500px;
     width: 100%;
-    background-image: url(../images/header.PNG);
+    background-image: url(../images/header.png);
     background-size: cover;
     background-position: 0px -100px;
     background-attachment: fixed; }
+    @media (max-width: 800px) {
+      .index-header .background {
+        background-position: bottom; } }
   .index-header .header-content {
     margin: 150px 200px 0px 200px;
     color: white; }
     .index-header .header-content h1 {
       font-size: 4rem;
       font-family: "Roboto Slab"; }
+    .index-header .header-content h2 {
+      font-size: 5rem;
+      font-family: 'Dekko', cursive; }
     .index-header .header-content h3 {
       font-family: "Roboto Slab";
-      font-size: 1.7rem; }
+      font-size: 1.7rem;
+      line-height: 25px; }
       @media screen and (max-width: 640px) {
         .index-header .header-content h3 {
           margin: 0 5%; } }
@@ -222,7 +229,7 @@ html, body {
 
 .index-signup {
   height: 300px;
-  background-image: url(../images/header.PNG);
+  background-image: url(../images/header.png);
   background-size: cover;
   background-position: top;
   background-attachment: fixed; }
@@ -307,12 +314,30 @@ html, body {
     bottom: 0;
     height: 300px;
     width: 100%;
-    background-image: url(../images/about.PNG);
+    background-image: url(../images/about.png);
     background-size: cover;
     background-position: 0px -500px;
     background-attachment: fixed; }
+    @media (max-width: 1700px) {
+      .about-header .background {
+        background-position: bottom; } }
+    @media (max-width: 1400px) {
+      .about-header .background {
+        background-position: 0px -100px; } }
+    @media (max-width: 800px) {
+      .about-header .background {
+        background-position: bottom; } }
   .about-header .header-text {
     margin-top: 150px; }
+    .about-header .header-text h1 {
+      font-size: 5rem;
+      font-family: 'Dekko', cursive; }
+
+.header-text {
+  margin-top: 150px; }
+  .header-text h1 {
+    font-size: 5rem;
+    font-family: 'Dekko', cursive; }
 
 .about-text {
   margin: 0px 100px; }
@@ -327,11 +352,23 @@ html, body {
     .about-text .text-positioning .image-resized {
       margin-top: 40px;
       height: 350px; }
+      @media (max-width: 550px) {
+        .about-text .text-positioning .image-resized {
+          height: 250px !important;
+          width: 300px; } }
   .about-text .download-button {
     border: none;
     padding: 10px 20px;
     border-radius: 0;
     background-color: #d91b5c; }
+  @media (max-width: 760px) {
+    .about-text .responsive {
+      height: 300px !important;
+      width: 500px; } }
+  @media (max-width: 578px) {
+    .about-text .responsive {
+      height: 150px !important;
+      width: 250px; } }
 
 #blockquote {
   margin: 50px 0px;
@@ -354,7 +391,7 @@ html, body {
 
 .about-members {
   height: 200px;
-  background-image: url(../images/about.PNG);
+  background-image: url(../images/about.png);
   background-size: cover;
   background-attachment: fixed; }
   .about-members .btn {
@@ -376,18 +413,22 @@ html, body {
   right: 0;
   bottom: 0;
   height: 300px;
-  background-image: url(../images/contact.PNG);
+  background-image: url(../images/contact.png);
   background-size: cover;
   background-attachment: fixed;
   background-position: 0px -800px; }
+  @media (max-width: 1700px) {
+    .contact-header {
+      background-position: 0px -400px; } }
+  @media (max-width: 800px) {
+    .contact-header {
+      background-position: bottom; } }
   .contact-header .header-text h1 {
     color: white;
     margin-top: 150px; }
 
 .contact-form {
-  position: relative;
-  height: 300px;
-  margin-top: -100px; }
+  position: relative; }
   .contact-form .btn-primary {
     background-color: #d91b5c;
     border-radius: 0;
@@ -407,9 +448,17 @@ html, body {
 @media screen and (max-width: 991px) {
   .contact-info {
     margin-top: 350px;
-    height: 250px; }
+    height: 350px; }
   .contact-form {
-    margin-bottom: 370px; } }
+    margin-bottom: 470px; } }
+
+@media screen and (max-width: 560px) {
+  .contact-info {
+    height: 450px; } }
+
+@media screen and (max-width: 350px) {
+  .contact-info {
+    height: 600px; } }
 
 .blog-header {
   height: 400px;
@@ -425,9 +474,17 @@ html, body {
   @media (max-width: 1910px) {
     .blog-header {
       background-position: 0px -500px; } }
+  @media (max-width: 1575px) {
+    .blog-header {
+      background-position: 0px -300px; } }
+  @media (max-width: 800px) {
+    .blog-header {
+      background-position: bottom; } }
   .blog-header .blog-text {
     height: 400px; }
     .blog-header .blog-text h1 {
+      font-family: 'Dekko', cursive;
+      font-size: 5rem;
       padding-top: 170px;
       color: white; }
 
@@ -528,7 +585,15 @@ html, body {
   background-size: cover;
   background-position: 0px -600px;
   background-image: url(../images/header-members.jpeg); }
+  @media (max-width: 1900px) {
+    .members-header {
+      background-position: 0px -300px; } }
+  @media (max-width: 900px) {
+    .members-header {
+      background-position: bottom; } }
   .members-header h1 {
+    font-size: 5rem;
+    font-family: 'Dekko', cursive;
     margin-top: 200px;
     color: white; }
 
@@ -598,8 +663,13 @@ html, body {
   background-size: cover;
   background-position: 0px -250px;
   background-attachment: fixed;
-  background-image: url(../images/helpbackground1.jpeg); }
+  background-image: url(../images/help.jpeg); }
+  @media (max-width: 800px) {
+    .help-header {
+      background-position: bottom; } }
   .help-header h1 {
+    font-size: 5rem;
+    font-family: 'Dekko', cursive;
     color: white;
     margin-top: 150px; }
 
@@ -783,7 +853,15 @@ a {
   background-attachment: fixed;
   background-position: 0px -500px;
   background-image: url(../images/header-users.png); }
+  @media (max-width: 1250px) {
+    .project-view-header {
+      background-position: 0px -200px; } }
+  @media (max-width: 800px) {
+    .project-view-header {
+      background-position: bottom; } }
   .project-view-header h1 {
+    font-size: 5rem !important;
+    font-family: 'Dekko', cursive;
     padding-top: 150px;
     color: white; }
 
@@ -887,13 +965,18 @@ a {
   .member-image #goBack {
     background: none;
     border: none;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: 300;
     position: absolute;
     color: #d91b5c;
-    right: 20%;
+    right: 30px;
     transition: 0.3s all ease-in-out;
-    top: 20px; }
+    top: 15px; }
+    @media (max-width: 800px) {
+      .member-image #goBack {
+        top: 10px;
+        font-size: 30px;
+        right: 10px; } }
     .member-image #goBack:hover {
       -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);

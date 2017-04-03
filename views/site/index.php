@@ -9,7 +9,8 @@ $this->title = 'Rotaract';
     <div class="background"></div>
     <div class="header-content text-center">
         <h2>Hai să facem diferența!</h2>
-        <div class="text-center container"><h3>Clubul Rotaract Suceava Bucovina face parte din familia internațională a cluburilor Rotary unde vecini, prieteni și liderii din fiecare domeniu își împart ideile și rezolvă probleme pentru a genera schimbare sustenabilă.</h3></div>
+        <div class="text-center line-height container"><h3>Clubul Rotaract Suceava Bucovina face parte din familia internațională a cluburilor Rotary unde vecini,
+                <br> prieteni și liderii din fiecare domeniu își împart ideile și rezolvă probleme pentru a genera schimbare sustenabilă.</h3></div>
         <?= Html::a('Afla mai multe', ['/site/about'], ['class'=>'href btn btn-primary']) ?>
         <br>
     </div>

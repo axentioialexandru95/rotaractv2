@@ -36,7 +36,7 @@ $this->title = 'Proiecte';
 
 <div class="finished-projects">
     <div class="projects-text text-center">
-        <h1>Proiecte Terminate</h1>
+        <h1>Proiecte Finalizate</h1>
         <hr>
     </div>
 </div>

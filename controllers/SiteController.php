@@ -228,7 +228,7 @@ class SiteController extends Controller
     public function actionDownload()
     {
         $path = Yii::getAlias('@webroot') . '/';   
-        $file = $path . '/downloads/contract.docx';
+        $file = $path . '/downloads/D230.pdf';
         Yii::$app->response->sendFile($file);
        
     }

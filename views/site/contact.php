@@ -25,8 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="container">
     <div class="contact-info text-center">
         <div class="col-md-12">
-            <i class="fa fa-phone"> 0745 167 868</i>
-            <p>Sedintele au loc Joi, ora 18:00 <br> <i class="fa fa-map-marker"></i> Ilie Ilascu 14</p>
+            <i class="fa fa-phone"></i> +40 745 167 868
+            <p>Sedintele au loc Miercuri, ora 18:00 <br> <i class="fa fa-map-marker"></i> Ilie Ilascu 14 / Suceava / Romania</p>
             <br>
 
         </div>
